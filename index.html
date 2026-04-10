@@ -1,0 +1,1597 @@
+<!DOCTYPE html>
+<html lang="ru"> 
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ИСМА — контейнеры и тара</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css?v=84" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <div class="brand">
+          <a href="#" class="logo" aria-label="ИСМА на главную">
+            <img class="logo__img" src="assets/исма.svg" width="144" height="49" alt="ИСМА" />
+          </a>
+          <span class="brand__divider" aria-hidden="true"></span>
+          <div class="brand__sub" aria-label="Официальный дистрибьютор iPlast">
+            <span>Официальный</span>
+            <span>дистрибьютор <b><span class="brand__sub-accent">iPlast</span></b></span>
+          </div>
+        </div>
+        <nav class="nav" aria-label="Основное меню">
+          <div class="nav__link nav__link--catalog">
+            <button
+              type="button"
+              id="catalogMegaOpen"
+              class="nav__catalog-btn"
+              aria-label="Открыть каталог"
+              aria-haspopup="true"
+              aria-expanded="false"
+              aria-controls="catalogMega"
+            >
+              <span class="nav__catalog-eq" aria-hidden="true"></span>
+            </button>
+            <a class="nav__catalog-text" href="#catalog">Каталог</a>
+          </div>
+          <a class="nav__link" href="#about">О компании</a>
+          <a class="nav__link" href="#materials">Материалы</a>
+          <a class="nav__link" href="#contacts">Контакты</a>
+        </nav>
+        <div class="header-tools">
+          <a class="header-tools__phone" href="tel:+79376236888">
+            <span class="header-tools__phone-icon" aria-hidden="true">
+              <svg
+                class="header-tools__phone-svg header-tools__phone-svg--desktop"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                />
+              </svg>
+              <img
+                class="header-tools__phone-img header-tools__phone-img--mobile"
+                src="assets/phone-icon-mobile.png"
+                width="14"
+                height="14"
+                alt=""
+              />
+            </span>
+            <span class="header-tools__phone-text">+7 937 623 68 88</span>
+          </a>
+          <button type="button" class="header-tools__icon" aria-label="Поиск">
+            <svg
+              class="header-tools__icon-svg header-tools__icon-svg--desktop"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <circle cx="11" cy="11" r="7" />
+              <path d="M20 20l-3-3" stroke-linecap="round" />
+            </svg>
+            <img
+              class="header-tools__icon-img header-tools__icon-img--mobile"
+              src="assets/search-icon-mobile.png"
+              width="20"
+              height="20"
+              alt=""
+            />
+          </button>
+          <a class="header-tools__pill" href="#cart" aria-label="Корзина">
+            <span class="header-tools__pill-icon" aria-hidden="true">
+              <img
+                class="header-tools__pill-img header-tools__pill-img--desktop"
+                src="assets/Korzina.webp"
+                width="20"
+                height="20"
+                alt=""
+              />
+              <img
+                class="header-tools__pill-img header-tools__pill-img--mobile"
+                src="assets/cart-icon-mobile.png"
+                width="20"
+                height="20"
+                alt=""
+              />
+            </span>
+            <span class="header-tools__pill-text">Корзина</span>
+            <span class="header-tools__pill-badge" aria-label="0 товаров">0</span>
+          </a>
+          <button type="button" class="header-tools__menu" aria-label="Открыть меню">
+            <img
+              class="header-tools__menu-img"
+              src="assets/Burger.png"
+              width="15"
+              height="8"
+              alt=""
+              aria-hidden="true"
+            />
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="catalog-mega" id="catalogMega" hidden aria-hidden="true">
+      <div class="catalog-mega__backdrop"></div>
+      <div class="container catalog-mega__sheet-wrap">
+        <div class="catalog-mega__sheet" role="dialog" aria-modal="true" aria-labelledby="catalogMegaTitle">
+          <div class="catalog-mega__inner">
+          <h2 id="catalogMegaTitle" class="visually-hidden">Каталог</h2>
+          <div class="catalog-mega__layout">
+            <aside class="catalog-mega__sidebar" aria-label="Разделы каталога">
+              <ul class="catalog-mega__primary">
+                <li><a href="#" data-mega-panel="full">Пластиковые ящики</a></li>
+                <li><a href="#" data-mega-panel="compact">Пластиковые ящики</a></li>
+                <li><a href="#" data-mega-panel="empty">Складские лотки</a></li>
+                <li><a href="#" data-mega-panel="empty">Неразборные пластиковые контейнеры</a></li>
+                <li><a href="#" data-mega-panel="empty">Пластиковые ящики</a></li>
+                <li><a href="#" data-mega-panel="empty">Складские лотки</a></li>
+                <li><a href="#" data-mega-panel="empty">Неразборные пластиковые контейнеры</a></li>
+                <li><a href="#" data-mega-panel="empty">Пластиковые ящики</a></li>
+                <li><a href="#" data-mega-panel="empty">Складские лотки</a></li>
+                <li><a href="#" data-mega-panel="empty">Неразборные пластиковые контейнеры</a></li>
+                <li><a href="#" data-mega-panel="empty">Пластиковые ящики</a></li>
+                <li><a href="#" data-mega-panel="empty">Складские лотки</a></li>
+              </ul>
+            </aside>
+            <div class="catalog-mega__main">
+              <div class="catalog-mega__cols">
+                <div class="catalog-mega__col">
+                  <ul class="catalog-mega__sub">
+                    <li><a href="katalog.html">Пищевые пластиковые ящики</a></li>
+                    <li><a href="#">Евроконтейнеры ЕС</a></li>
+                    <li><a href="#">Вкладываемые ящики INSTORE</a></li>
+                    <li><a href="#">Складные ящики</a></li>
+                    <li><a href="#">Контейнеры KLT</a></li>
+                    <li><a href="#">Универсальные ящики</a></li>
+                    <li><a href="#">Комплектующие для ящиков</a></li>
+                  </ul>
+                </div>
+                <div class="catalog-mega__col">
+                  <ul class="catalog-mega__sub">
+                    <li><a href="#">Пищевые пластиковые ящики</a></li>
+                    <li><a href="#">Евроконтейнеры ЕС</a></li>
+                    <li><a href="#">Вкладываемые ящики INSTORE</a></li>
+                    <li><a href="#">Складные ящики</a></li>
+                    <li><a href="#">Контейнеры KLT</a></li>
+                    <li><a href="#">Универсальные ящики</a></li>
+                    <li><a href="#">Комплектующие для ящиков</a></li>
+                  </ul>
+                </div>
+                <div class="catalog-mega__col">
+                  <ul class="catalog-mega__sub">
+                    <li><a href="#">Пищевые пластиковые ящики</a></li>
+                    <li><a href="#">Евроконтейнеры ЕС</a></li>
+                    <li><a href="#">Вкладываемые ящики INSTORE</a></li>
+                    <li><a href="#">Складные ящики</a></li>
+                    <li><a href="#">Контейнеры KLT</a></li>
+                    <li><a href="#">Универсальные ящики</a></li>
+                    <li><a href="#">Комплектующие для ящиков</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true" hidden>
+      <div class="mobile-menu__backdrop"></div>
+      <div class="mobile-menu__panel">
+        <a href="#top" class="mobile-menu__brand" aria-label="ИСМА на главную">
+          <img class="logo__img mobile-menu__logo" src="assets/logofooter.png" alt="ИСМА" />
+        </a>
+        <button type="button" class="mobile-menu__close" aria-label="Закрыть меню">
+          <svg viewBox="0 0 11 11" aria-hidden="true">
+            <path d="M1 1L10 10" />
+            <path d="M10 1L1 10" />
+          </svg>
+        </button>
+        <nav class="mobile-menu__links" aria-label="Мобильное меню">
+          <div class="mobile-menu__title">Категории каталога</div>
+          <div class="mobile-menu__catalog">
+            <a href="#catalog-trolleys">Транспортные тележки</a>
+            <a href="katalog.html">Пластиковые ящики</a>
+            <a href="#catalog-trays">Складские лотки</a>
+            <a href="#catalog-containers-sealed">Неразборные пластиковые контейнеры</a>
+            <a href="#catalog-containers-hinged">Разборные пластиковые контейнеры</a>
+            <a href="#catalog-waste">Мусорные контейнеры и баки</a>
+            <a href="#catalog-pallets">Пластиковые поддоны</a>
+            <a href="#catalog-polymer">Полимерный лист</a>
+            <a href="#catalog-isothermal">Изотермические контейнеры</a>
+            <a href="#catalog-barrels">Пластиковые бочки</a>
+          </div>
+          <div class="mobile-menu__primary">
+            <a href="#about">О компании</a>
+            <a href="#materials">Материалы</a>
+            <a href="#contacts">Контакты</a>
+          </div>
+          <a class="mobile-menu__feedback" href="#contacts">Обратная связь</a>
+        </nav>
+      </div>
+    </div>
+
+    <main>
+      <section class="hero-block">
+        <div class="container hero-grid">
+          <div class="hero-main">
+            <div class="hero-main__slides">
+              <article class="hero-main__card is-active" data-slide="0" aria-hidden="false">
+                <div class="hero-main__content">
+                  <span class="hero-main__badge">Акция</span>
+                  <h1 class="hero-main__title">
+                    Контейнер для ТКО 1 100 литров с опцией крышки Twin Lid
+                  </h1>
+                  <p class="hero-main__meta">
+                    Международный стандарт DIN840<br />
+                    Температура эксплуатации от -40 до +50 C
+                  </p>
+
+                  <div class="hero-main__bottom">
+                    <div class="hero-main__prices">
+                      <div class="hero-main__old">24 590</div>
+                      <div class="hero-main__price">21 060 ₽</div>
+                    </div>
+                    <button type="button" class="hero-main__cta" aria-label="Подробнее">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M5 6H18V19" stroke="currentColor" stroke-width="2" stroke-miterlimit="10"></path>
+                        <path d="M4.79999 19.2L18 6" stroke="currentColor" stroke-width="2" stroke-miterlimit="10"></path>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="hero-main__visual" aria-hidden="true">
+                  <img
+                    class="hero-main__photo"
+                    src="assets/Musorka.webp"
+                    width="773"
+                    height="576"
+                    alt=""
+                  />
+                </div>
+              </article>
+
+              <article class="hero-main__card" data-slide="1" aria-hidden="true">
+                <div class="hero-main__content">
+                  <span class="hero-main__badge">Акция</span>
+                  <h2 class="hero-main__title">
+                    Круглый пластиковый таз 45 л с усиленными ручками
+                  </h2>
+                  <p class="hero-main__meta">
+                    Пищевой полимер, устойчивый к УФ. Диаметр 520 мм, высота 180 мм. Подходит для пищевой и промышленной сферы.
+                  </p>
+
+                  <div class="hero-main__bottom">
+                    <div class="hero-main__prices">
+                      <div class="hero-main__old">3 200</div>
+                      <div class="hero-main__price">2 890 ₽</div>
+                    </div>
+                    <button type="button" class="hero-main__cta" aria-label="Подробнее">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M5 6H18V19" stroke="currentColor" stroke-width="2" stroke-miterlimit="10"></path>
+                        <path d="M4.79999 19.2L18 6" stroke="currentColor" stroke-width="2" stroke-miterlimit="10"></path>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="hero-main__visual" aria-hidden="true">
+                  <img
+                    class="hero-main__photo"
+                    src="assets/MusorkaZerkalo.webp"
+                    width="773"
+                    height="576"
+                    alt=""
+                  />
+                </div>
+              </article>
+            </div>
+
+            <div class="hero-main__nav">
+              <button type="button" class="hero-main__nav-btn hero-main__nav-btn--prev" aria-label="Предыдущий слайд">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M19 12H5" />
+                  <path d="M11 6L5 12L11 18" />
+                </svg>
+              </button>
+              <button type="button" class="hero-main__nav-btn hero-main__nav-btn--next" aria-label="Следующий слайд">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12H19" />
+                  <path d="M13 6L19 12L13 18" />
+                </svg>
+              </button>
+              <div class="hero-main__progress" aria-hidden="true">
+                <div class="hero-main__progress-track"></div>
+              </div>
+            </div>
+          </div>
+          <aside class="hero-side">
+            <div class="hero-card hero-card--catalog">
+              <h2 class="hero-card__title">Каталог<br />продукции</h2>
+              <div class="hero-card__spacer" aria-hidden="true"></div>
+              <div class="hero-card__footer hero-card__footer--split">
+                <a class="hero-card__link" href="#">Скачать</a>
+                <span class="hero-card__ext">.PDF</span>
+              </div>
+            </div>
+            <div class="hero-card hero-card--presentation">
+              <div class="hero-card__head">
+                <h2 class="hero-card__title">Презентация компании</h2>
+                <a class="hero-card__play" href="#" aria-label="Смотреть презентацию">
+                  <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </a>
+              </div>
+              <div class="hero-card__spacer" aria-hidden="true"></div>
+              <p class="hero-card__desc">
+                Инновационные решения для промышленности, логистики и торговли
+              </p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section-cats" id="catalog">
+        <div class="container">
+          <div class="cat-row" id="catalog-grid">
+            <a class="cat-card" id="catalog-crates" href="katalog.html">
+              <div class="cat-card__box">
+                <div class="cat-card__thumb">
+                  <img src="assets/Korobka.webp" width="160" height="160" alt="" loading="lazy" />
+                </div>
+              </div>
+              <div class="cat-card__label">Пластиковые ящики</div>
+            </a>
+            <a class="cat-card" href="#">
+              <div class="cat-card__box">
+                <div class="cat-card__thumb">
+                  <img src="assets/2.webp" width="160" height="160" alt="" loading="lazy" />
+                </div>
+              </div>
+              <div class="cat-card__label">Пластиковые ящики</div>
+            </a>
+            <a class="cat-card" id="catalog-containers-sealed" href="#catalog-containers-sealed">
+              <div class="cat-card__box">
+                <div class="cat-card__thumb">
+                  <img src="assets/3.webp" width="160" height="160" alt="" loading="lazy" />
+                </div>
+              </div>
+              <div class="cat-card__label">Вкладываемые контейнеры</div>
+            </a>
+            <a class="cat-card" id="catalog-trolleys" href="#catalog-trolleys">
+              <div class="cat-card__box">
+                <div class="cat-card__thumb">
+                  <img src="assets/4.webp" width="160" height="160" alt="" loading="lazy" />
+                </div>
+              </div>
+              <div class="cat-card__label">Транспортные тележки</div>
+            </a>
+            <a class="cat-card" id="catalog-pallets" href="#catalog-pallets">
+              <div class="cat-card__box">
+                <div class="cat-card__thumb">
+                  <img src="assets/5.webp" width="160" height="160" alt="" loading="lazy" />
+                </div>
+              </div>
+              <div class="cat-card__label">Пластиковые поддоны</div>
+            </a>
+            <a class="cat-card" id="catalog-barrels" href="#catalog-barrels">
+              <div class="cat-card__box">
+                <div class="cat-card__thumb">
+                  <img src="assets/6.webp" width="160" height="160" alt="" loading="lazy" />
+                </div>
+              </div>
+              <div class="cat-card__label">Наливная тара</div>
+            </a>
+            <a class="cat-card" id="catalog-trays" href="#catalog-trays">
+              <div class="cat-card__box">
+                <div class="cat-card__thumb">
+                  <img src="assets/7.webp" width="160" height="160" alt="" loading="lazy" />
+                </div>
+              </div>
+              <div class="cat-card__label">Складские ящики</div>
+            </a>
+            <a class="cat-card" id="catalog-containers-hinged" href="#catalog-containers-hinged">
+              <div class="cat-card__box">
+                <div class="cat-card__thumb">
+                  <img src="assets/7.webp" width="160" height="160" alt="" loading="lazy" />
+                </div>
+              </div>
+              <div class="cat-card__label">Вкладываемые контейнеры</div>
+            </a>
+            <a class="cat-card" href="#">
+              <div class="cat-card__box">
+                <div class="cat-card__thumb">
+                  <img src="assets/7.webp" width="160" height="160" alt="" loading="lazy" />
+                </div>
+              </div>
+              <div class="cat-card__label">Складские ящики</div>
+            </a>
+            <a class="cat-card" href="#">
+              <div class="cat-card__box">
+                <div class="cat-card__thumb">
+                  <img src="assets/7.webp" width="160" height="160" alt="" loading="lazy" />
+                </div>
+              </div>
+              <div class="cat-card__label">Вкладываемые контейнеры</div>
+            </a>
+            <a class="cat-card" href="#">
+              <div class="cat-card__box">
+                <div class="cat-card__thumb">
+                  <img src="assets/7.webp" width="160" height="160" alt="" loading="lazy" />
+                </div>
+              </div>
+              <div class="cat-card__label">Складские ящики</div>
+            </a>
+            <a class="cat-card" href="#">
+              <div class="cat-card__box">
+                <div class="cat-card__thumb">
+                  <img src="assets/7.webp" width="160" height="160" alt="" loading="lazy" />
+                </div>
+              </div>
+              <div class="cat-card__label">Вкладываемые контейнеры</div>
+            </a>
+            <a class="cat-card" id="catalog-waste" href="#catalog-waste">
+              <div class="cat-card__box">
+                <div class="cat-card__thumb">
+                  <img src="assets/7.webp" width="160" height="160" alt="" loading="lazy" />
+                </div>
+              </div>
+              <div class="cat-card__label">Контейнеры ТКО</div>
+            </a>
+            <a class="cat-card" id="catalog-isothermal" href="#catalog-isothermal">
+              <div class="cat-card__box">
+                <div class="cat-card__thumb">
+                  <img src="assets/7.webp" width="160" height="160" alt="" loading="lazy" />
+                </div>
+              </div>
+              <div class="cat-card__label">Тележки платформенные</div>
+            </a>
+            <a class="cat-card" href="#">
+              <div class="cat-card__box">
+                <div class="cat-card__thumb">
+                  <img src="assets/7.webp" width="160" height="160" alt="" loading="lazy" />
+                </div>
+              </div>
+              <div class="cat-card__label">Решётки и ограждения</div>
+            </a>
+            <a class="cat-card" id="catalog-polymer" href="#catalog-polymer">
+              <div class="cat-card__box">
+                <div class="cat-card__thumb">
+                  <img src="assets/7.webp" width="160" height="160" alt="" loading="lazy" />
+                </div>
+              </div>
+              <div class="cat-card__label">Прочая тара</div>
+            </a>
+          </div>
+          <div class="section-cats__more">
+            <span class="section-cats__line" aria-hidden="true"></span>
+            <button type="button" class="section-cats__btn" aria-expanded="false" aria-controls="catalog-grid">
+              Смотреть все
+            </button>
+            <span class="section-cats__line" aria-hidden="true"></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-products" aria-labelledby="novelties-title">
+        <div class="container">
+          <div class="section-products__head">
+            <h2 id="novelties-title" class="section-products__title">Новинки</h2>
+          </div>
+          <div class="product-scroll" id="novelties-scroll">
+            <div class="product-grid product-grid--novelties">
+            <article class="product-card">
+              <div class="product-card__badges">
+                <span class="badge badge--new">Новинка</span>
+              </div>
+              <div class="product-card__img">
+                <a class="product-card__img-link" href="tovar.html" aria-label="Подробнее о товаре">
+                  <img src="assets/Tazik.webp" width="200" height="160" alt="" loading="lazy" />
+                </a>
+              </div>
+              <hr class="product-card__divider" aria-hidden="true" />
+              <div class="product-card__sku">Арт.: 2.355F.65 KV 5328</div>
+              <div class="product-card__name">Ящик пластиковый 600×400, сплошное дно</div>
+              <div class="product-card__price">785 ₽</div>
+              <div class="product-card__row">
+                <div class="qty">
+                  <button type="button" aria-label="Уменьшить"><span class="qty__btn-text qty__btn-text--minus" aria-hidden="true"></span></button>
+                  <span>1</span>
+                  <button type="button" aria-label="Увеличить"><span class="qty__btn-text qty__btn-text--plus" aria-hidden="true"></span></button>
+                </div>
+                <button type="button" class="btn-cart">В корзину</button>
+              </div>
+              <button type="button" class="btn-quick">Быстрый заказ</button>
+            </article>
+            <article class="product-card">
+              <div class="product-card__badges">
+                <span class="badge badge--new">Новинка</span>
+              </div>
+              <div class="product-card__img">
+                <a class="product-card__img-link" href="tovar.html" aria-label="Подробнее о товаре">
+                  <img src="assets/Tazik.webp" width="200" height="160" alt="" loading="lazy" />
+                </a>
+              </div>
+              <hr class="product-card__divider" aria-hidden="true" />
+              <div class="product-card__sku">Арт.: 2.355F.65 KV 5329</div>
+              <div class="product-card__name">Ящик вкладной 400×300</div>
+              <div class="product-card__price">620 ₽</div>
+              <div class="product-card__row">
+                <div class="qty">
+                  <button type="button" aria-label="Уменьшить"><span class="qty__btn-text qty__btn-text--minus" aria-hidden="true"></span></button>
+                  <span>1</span>
+                  <button type="button" aria-label="Увеличить"><span class="qty__btn-text qty__btn-text--plus" aria-hidden="true"></span></button>
+                </div>
+                <button type="button" class="btn-cart">В корзину</button>
+              </div>
+              <button type="button" class="btn-quick">Быстрый заказ</button>
+            </article>
+            <article class="product-card">
+              <div class="product-card__badges">
+                <span class="badge badge--new">Новинка</span>
+              </div>
+              <div class="product-card__img">
+                <a class="product-card__img-link" href="tovar.html" aria-label="Подробнее о товаре">
+                  <img src="assets/Tazik.webp" width="200" height="160" alt="" loading="lazy" />
+                </a>
+              </div>
+              <hr class="product-card__divider" aria-hidden="true" />
+              <div class="product-card__sku">Арт.: 2.355F.65 KV 5330</div>
+              <div class="product-card__name">Контейнер для хранения 800×600</div>
+              <div class="product-card__price">1 240 ₽</div>
+              <div class="product-card__row">
+                <div class="qty">
+                  <button type="button" aria-label="Уменьшить"><span class="qty__btn-text qty__btn-text--minus" aria-hidden="true"></span></button>
+                  <span>1</span>
+                  <button type="button" aria-label="Увеличить"><span class="qty__btn-text qty__btn-text--plus" aria-hidden="true"></span></button>
+                </div>
+                <button type="button" class="btn-cart">В корзину</button>
+              </div>
+              <button type="button" class="btn-quick">Быстрый заказ</button>
+            </article>
+            <article class="product-card">
+              <div class="product-card__badges">
+                <span class="badge badge--new">Новинка</span>
+              </div>
+              <div class="product-card__img">
+                <a class="product-card__img-link" href="tovar.html" aria-label="Подробнее о товаре">
+                  <img src="assets/Tazik.webp" width="200" height="160" alt="" loading="lazy" />
+                </a>
+              </div>
+              <hr class="product-card__divider" aria-hidden="true" />
+              <div class="product-card__sku">Арт.: 2.355F.65 KV 5331</div>
+              <div class="product-card__name">Лоток для деталей 500×200</div>
+              <div class="product-card__price">410 ₽</div>
+              <div class="product-card__row">
+                <div class="qty">
+                  <button type="button" aria-label="Уменьшить"><span class="qty__btn-text qty__btn-text--minus" aria-hidden="true"></span></button>
+                  <span>1</span>
+                  <button type="button" aria-label="Увеличить"><span class="qty__btn-text qty__btn-text--plus" aria-hidden="true"></span></button>
+                </div>
+                <button type="button" class="btn-cart">В корзину</button>
+              </div>
+              <button type="button" class="btn-quick">Быстрый заказ</button>
+            </article>
+            <article class="product-card">
+              <div class="product-card__badges">
+                <span class="badge badge--new">Новинка</span>
+              </div>
+              <div class="product-card__img">
+                <a class="product-card__img-link" href="tovar.html" aria-label="Подробнее о товаре">
+                  <img src="assets/Tazik.webp" width="200" height="160" alt="" loading="lazy" />
+                </a>
+              </div>
+              <hr class="product-card__divider" aria-hidden="true" />
+              <div class="product-card__sku">Арт.: 2.355F.65 KV 5332</div>
+              <div class="product-card__name">Ящик перфорированный 600×400</div>
+              <div class="product-card__price">890 ₽</div>
+              <div class="product-card__row">
+                <div class="qty">
+                  <button type="button" aria-label="Уменьшить"><span class="qty__btn-text qty__btn-text--minus" aria-hidden="true"></span></button>
+                  <span>1</span>
+                  <button type="button" aria-label="Увеличить"><span class="qty__btn-text qty__btn-text--plus" aria-hidden="true"></span></button>
+                </div>
+                <button type="button" class="btn-cart">В корзину</button>
+              </div>
+              <button type="button" class="btn-quick">Быстрый заказ</button>
+            </article>
+            <article class="product-card">
+              <div class="product-card__badges">
+                <span class="badge badge--new">Новинка</span>
+              </div>
+              <div class="product-card__img">
+                <a class="product-card__img-link" href="tovar.html" aria-label="Подробнее о товаре">
+                  <img src="assets/Tazik.webp" width="200" height="160" alt="" loading="lazy" />
+                </a>
+              </div>
+              <hr class="product-card__divider" aria-hidden="true" />
+              <div class="product-card__sku">Арт.: 2.355F.65 KV 5333</div>
+              <div class="product-card__name">Ящик с крышкой 400×300×280</div>
+              <div class="product-card__price">1 050 ₽</div>
+              <div class="product-card__row">
+                <div class="qty">
+                  <button type="button" aria-label="Уменьшить"><span class="qty__btn-text qty__btn-text--minus" aria-hidden="true"></span></button>
+                  <span>1</span>
+                  <button type="button" aria-label="Увеличить"><span class="qty__btn-text qty__btn-text--plus" aria-hidden="true"></span></button>
+                </div>
+                <button type="button" class="btn-cart">В корзину</button>
+              </div>
+              <button type="button" class="btn-quick">Быстрый заказ</button>
+            </article>
+            <article class="product-card">
+              <div class="product-card__badges">
+                <span class="badge badge--new">Новинка</span>
+              </div>
+              <div class="product-card__img">
+                <a class="product-card__img-link" href="tovar.html" aria-label="Подробнее о товаре">
+                  <img src="assets/Tazik.webp" width="200" height="160" alt="" loading="lazy" />
+                </a>
+              </div>
+              <hr class="product-card__divider" aria-hidden="true" />
+              <div class="product-card__sku">Арт.: 2.355F.65 KV 5334</div>
+              <div class="product-card__name">Контейнер многоярусный 600×400</div>
+              <div class="product-card__price">2 100 ₽</div>
+              <div class="product-card__row">
+                <div class="qty">
+                  <button type="button" aria-label="Уменьшить"><span class="qty__btn-text qty__btn-text--minus" aria-hidden="true"></span></button>
+                  <span>1</span>
+                  <button type="button" aria-label="Увеличить"><span class="qty__btn-text qty__btn-text--plus" aria-hidden="true"></span></button>
+                </div>
+                <button type="button" class="btn-cart">В корзину</button>
+              </div>
+              <button type="button" class="btn-quick">Быстрый заказ</button>
+            </article>
+            <article class="product-card">
+              <div class="product-card__badges">
+                <span class="badge badge--new">Новинка</span>
+              </div>
+              <div class="product-card__img">
+                <a class="product-card__img-link" href="tovar.html" aria-label="Подробнее о товаре">
+                  <img src="assets/Tazik.webp" width="200" height="160" alt="" loading="lazy" />
+                </a>
+              </div>
+              <hr class="product-card__divider" aria-hidden="true" />
+              <div class="product-card__sku">Арт.: 2.355F.65 KV 5335</div>
+              <div class="product-card__name">Лоток для деталей 300×200×150</div>
+              <div class="product-card__price">350 ₽</div>
+              <div class="product-card__row">
+                <div class="qty">
+                  <button type="button" aria-label="Уменьшить"><span class="qty__btn-text qty__btn-text--minus" aria-hidden="true"></span></button>
+                  <span>1</span>
+                  <button type="button" aria-label="Увеличить"><span class="qty__btn-text qty__btn-text--plus" aria-hidden="true"></span></button>
+                </div>
+                <button type="button" class="btn-cart">В корзину</button>
+              </div>
+              <button type="button" class="btn-quick">Быстрый заказ</button>
+            </article>
+            </div>
+          </div>
+          <div class="product-strip product-strip--novelties" id="novelties-strip" aria-hidden="true">
+            <div class="product-strip__hit-area">
+              <div class="product-strip__track">
+                <span class="product-strip__fill"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-products" aria-labelledby="popular-title">
+        <div class="container">
+          <div class="section-products__head">
+            <h2 id="popular-title" class="section-products__title">Популярные товары</h2>
+          </div>
+          <div class="product-scroll" id="popular-scroll">
+            <div class="product-grid product-grid--popular">
+            <article class="product-card">
+              <div class="product-card__badges">
+                <span class="badge badge--sale">Хит</span>
+              </div>
+              <div class="product-card__img">
+                <a class="product-card__img-link" href="tovar.html" aria-label="Подробнее о товаре">
+                  <img src="assets/Tazik.webp" width="200" height="160" alt="" loading="lazy" />
+                </a>
+              </div>
+              <hr class="product-card__divider" aria-hidden="true" />
+              <div class="product-card__sku">Арт. 200101</div>
+              <div class="product-card__name">Поддон пластиковый 1200×800</div>
+              <div class="product-card__price">3 200 ₽</div>
+              <div class="product-card__row">
+                <div class="qty">
+                  <button type="button" aria-label="Уменьшить"><span class="qty__btn-text qty__btn-text--minus" aria-hidden="true"></span></button>
+                  <span>1</span>
+                  <button type="button" aria-label="Увеличить"><span class="qty__btn-text qty__btn-text--plus" aria-hidden="true"></span></button>
+                </div>
+                <button type="button" class="btn-cart">В корзину</button>
+              </div>
+              <button type="button" class="btn-quick">Быстрый заказ</button>
+            </article>
+            <article class="product-card">
+              <div class="product-card__badges"></div>
+              <div class="product-card__img">
+                <a class="product-card__img-link" href="tovar.html" aria-label="Подробнее о товаре">
+                  <img src="assets/Tazik.webp" width="200" height="160" alt="" loading="lazy" />
+                </a>
+              </div>
+              <hr class="product-card__divider" aria-hidden="true" />
+              <div class="product-card__sku">Арт. 200102</div>
+              <div class="product-card__name">Бочка 200 л с крышкой</div>
+              <div class="product-card__price">4 500 ₽</div>
+              <div class="product-card__row">
+                <div class="qty">
+                  <button type="button" aria-label="Уменьшить"><span class="qty__btn-text qty__btn-text--minus" aria-hidden="true"></span></button>
+                  <span>1</span>
+                  <button type="button" aria-label="Увеличить"><span class="qty__btn-text qty__btn-text--plus" aria-hidden="true"></span></button>
+                </div>
+                <button type="button" class="btn-cart">В корзину</button>
+              </div>
+              <button type="button" class="btn-quick">Быстрый заказ</button>
+            </article>
+            <article class="product-card">
+              <div class="product-card__badges"></div>
+              <div class="product-card__img">
+                <a class="product-card__img-link" href="tovar.html" aria-label="Подробнее о товаре">
+                  <img src="assets/Tazik.webp" width="200" height="160" alt="" loading="lazy" />
+                </a>
+              </div>
+              <hr class="product-card__divider" aria-hidden="true" />
+              <div class="product-card__sku">Арт. 200103</div>
+              <div class="product-card__name">Контейнер для сбора ТКО 770 л</div>
+              <div class="product-card__price">18 900 ₽</div>
+              <div class="product-card__row">
+                <div class="qty">
+                  <button type="button" aria-label="Уменьшить"><span class="qty__btn-text qty__btn-text--minus" aria-hidden="true"></span></button>
+                  <span>1</span>
+                  <button type="button" aria-label="Увеличить"><span class="qty__btn-text qty__btn-text--plus" aria-hidden="true"></span></button>
+                </div>
+                <button type="button" class="btn-cart">В корзину</button>
+              </div>
+              <button type="button" class="btn-quick">Быстрый заказ</button>
+            </article>
+            <article class="product-card">
+              <div class="product-card__badges"></div>
+              <div class="product-card__img">
+                <a class="product-card__img-link" href="tovar.html" aria-label="Подробнее о товаре">
+                  <img src="assets/Tazik.webp" width="200" height="160" alt="" loading="lazy" />
+                </a>
+              </div>
+              <hr class="product-card__divider" aria-hidden="true" />
+              <div class="product-card__sku">Арт. 200104</div>
+              <div class="product-card__name">Ящик складной 400×300</div>
+              <div class="product-card__price">540 ₽</div>
+              <div class="product-card__row">
+                <div class="qty">
+                  <button type="button" aria-label="Уменьшить"><span class="qty__btn-text qty__btn-text--minus" aria-hidden="true"></span></button>
+                  <span>1</span>
+                  <button type="button" aria-label="Увеличить"><span class="qty__btn-text qty__btn-text--plus" aria-hidden="true"></span></button>
+                </div>
+                <button type="button" class="btn-cart">В корзину</button>
+              </div>
+              <button type="button" class="btn-quick">Быстрый заказ</button>
+            </article>
+            <article class="product-card">
+              <div class="product-card__badges"></div>
+              <div class="product-card__img">
+                <a class="product-card__img-link" href="tovar.html" aria-label="Подробнее о товаре">
+                  <img src="assets/Tazik.webp" width="200" height="160" alt="" loading="lazy" />
+                </a>
+              </div>
+              <hr class="product-card__divider" aria-hidden="true" />
+              <div class="product-card__sku">Арт. 200105</div>
+              <div class="product-card__name">Тележка платформенная 600×400</div>
+              <div class="product-card__price">7 800 ₽</div>
+              <div class="product-card__row">
+                <div class="qty">
+                  <button type="button" aria-label="Уменьшить"><span class="qty__btn-text qty__btn-text--minus" aria-hidden="true"></span></button>
+                  <span>1</span>
+                  <button type="button" aria-label="Увеличить"><span class="qty__btn-text qty__btn-text--plus" aria-hidden="true"></span></button>
+                </div>
+                <button type="button" class="btn-cart">В корзину</button>
+              </div>
+              <button type="button" class="btn-quick">Быстрый заказ</button>
+            </article>
+            <article class="product-card">
+              <div class="product-card__badges"></div>
+              <div class="product-card__img">
+                <a class="product-card__img-link" href="tovar.html" aria-label="Подробнее о товаре">
+                  <img src="assets/Tazik.webp" width="200" height="160" alt="" loading="lazy" />
+                </a>
+              </div>
+              <hr class="product-card__divider" aria-hidden="true" />
+              <div class="product-card__sku">Арт. 200106</div>
+              <div class="product-card__name">Поддон лёгкий 1000×600</div>
+              <div class="product-card__price">2 450 ₽</div>
+              <div class="product-card__row">
+                <div class="qty">
+                  <button type="button" aria-label="Уменьшить"><span class="qty__btn-text qty__btn-text--minus" aria-hidden="true"></span></button>
+                  <span>1</span>
+                  <button type="button" aria-label="Увеличить"><span class="qty__btn-text qty__btn-text--plus" aria-hidden="true"></span></button>
+                </div>
+                <button type="button" class="btn-cart">В корзину</button>
+              </div>
+              <button type="button" class="btn-quick">Быстрый заказ</button>
+            </article>
+            <article class="product-card">
+              <div class="product-card__badges"></div>
+              <div class="product-card__img">
+                <a class="product-card__img-link" href="tovar.html" aria-label="Подробнее о товаре">
+                  <img src="assets/Tazik.webp" width="200" height="160" alt="" loading="lazy" />
+                </a>
+              </div>
+              <hr class="product-card__divider" aria-hidden="true" />
+              <div class="product-card__sku">Арт. 200107</div>
+              <div class="product-card__name">Еврокуб 1000 л</div>
+              <div class="product-card__price">12 900 ₽</div>
+              <div class="product-card__row">
+                <div class="qty">
+                  <button type="button" aria-label="Уменьшить"><span class="qty__btn-text qty__btn-text--minus" aria-hidden="true"></span></button>
+                  <span>1</span>
+                  <button type="button" aria-label="Увеличить"><span class="qty__btn-text qty__btn-text--plus" aria-hidden="true"></span></button>
+                </div>
+                <button type="button" class="btn-cart">В корзину</button>
+              </div>
+              <button type="button" class="btn-quick">Быстрый заказ</button>
+            </article>
+            <article class="product-card">
+              <div class="product-card__badges">
+                <span class="badge badge--sale">Хит</span>
+              </div>
+              <div class="product-card__img">
+                <a class="product-card__img-link" href="tovar.html" aria-label="Подробнее о товаре">
+                  <img src="assets/Tazik.webp" width="200" height="160" alt="" loading="lazy" />
+                </a>
+              </div>
+              <hr class="product-card__divider" aria-hidden="true" />
+              <div class="product-card__sku">Арт. 200108</div>
+              <div class="product-card__name">Контейнер для хранения 800×600</div>
+              <div class="product-card__price">1 890 ₽</div>
+              <div class="product-card__row">
+                <div class="qty">
+                  <button type="button" aria-label="Уменьшить"><span class="qty__btn-text qty__btn-text--minus" aria-hidden="true"></span></button>
+                  <span>1</span>
+                  <button type="button" aria-label="Увеличить"><span class="qty__btn-text qty__btn-text--plus" aria-hidden="true"></span></button>
+                </div>
+                <button type="button" class="btn-cart">В корзину</button>
+              </div>
+              <button type="button" class="btn-quick">Быстрый заказ</button>
+            </article>
+            </div>
+          </div>
+          <div class="product-strip product-strip--popular" id="popular-strip" aria-hidden="true">
+            <div class="product-strip__hit-area">
+              <div class="product-strip__track">
+                <span class="product-strip__fill"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-faq" id="materials">
+        <div class="container">
+          <header class="section-faq__intro">
+            <h2 class="section-faq__title">Часто задаваемые вопросы</h2>
+            <p class="section-faq__lede">
+              Для получения дополнительной помощи наша служба
+            </p>
+          </header>
+          <div class="faq-grid">
+            <div class="faq-column">
+              <div class="faq-item">
+                <button type="button" class="faq-item__q" aria-expanded="false">
+                  Как оформить заказ оптом?
+                  <span class="faq-item__icon" aria-hidden="true"></span>
+                </button>
+                <div class="faq-item__a">
+                  <div class="faq-item__a-inner">
+                    Оставьте заявку через корзину или свяжитесь с менеджером по телефону. Мы подготовим
+                    коммерческое предложение и согласуем сроки поставки.
+                  </div>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button type="button" class="faq-item__q" aria-expanded="false">
+                  Какие способы оплаты доступны?
+                  <span class="faq-item__icon" aria-hidden="true"></span>
+                </button>
+                <div class="faq-item__a">
+                  <div class="faq-item__a-inner">
+                    Для юридических лиц — безналичный расчёт по счёту. Уточняйте условия отсрочки у
+                    менеджера.
+                  </div>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button type="button" class="faq-item__q" aria-expanded="false">
+                  Есть ли гарантия на продукцию?
+                  <span class="faq-item__icon" aria-hidden="true"></span>
+                </button>
+                <div class="faq-item__a">
+                  <div class="faq-item__a-inner">
+                    На изделия распространяется гарантия производителя. Сроки указаны в паспорте изделия.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="faq-column">
+              <div class="faq-item">
+                <button type="button" class="faq-item__q" aria-expanded="false">
+                  Есть ли доставка по России?
+                  <span class="faq-item__icon" aria-hidden="true"></span>
+                </button>
+                <div class="faq-item__a">
+                  <div class="faq-item__a-inner">
+                    Да, доставляем транспортными компаниями в регионы. Стоимость рассчитывается
+                    индивидуально в зависимости от объёма и направления.
+                  </div>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button type="button" class="faq-item__q" aria-expanded="false">
+                  Можно ли вернуть товар?
+                  <span class="faq-item__icon" aria-hidden="true"></span>
+                </button>
+                <div class="faq-item__a">
+                  <div class="faq-item__a-inner">
+                    Возврат возможен в соответствии с законодательством и договором поставки. Подробности
+                    уточняйте у отдела продаж.
+                  </div>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button type="button" class="faq-item__q" aria-expanded="false">
+                  Как получить каталог в PDF?
+                  <span class="faq-item__icon" aria-hidden="true"></span>
+                </button>
+                <div class="faq-item__a">
+                  <div class="faq-item__a-inner">
+                    Скачайте файл по ссылке «Каталог продукции» в блоке справа от главного баннера или
+                    запросите у менеджера.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contacts">
+      <div class="container">
+        <div class="site-footer__head">
+          <div class="site-footer__head-inner">
+            <div class="site-footer__head-top">
+              <a href="#" class="logo" aria-label="ИСМА на главную">
+                <img class="logo__img logo__img--footer" src="assets/исма.svg" alt="ИСМА" />
+              </a>
+              <a class="footer-to-top" href="#top">Наверх</a>
+            </div>
+            <div class="site-footer__head-line" aria-hidden="true"></div>
+          </div>
+        </div>
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-brand__company">ООО «Исма»</div>
+
+            <div class="footer-brand__contacts">
+              <a class="footer-pill" href="tel:+79376236888">8 (937) 623-68-88</a>
+              <a class="footer-pill" href="tel:+78552399957">8 (8552) 39-99-57</a>
+              <a class="footer-pill" href="mailto:isma10@mail.ru">isma10@mail.ru</a>
+            </div>
+
+            <a class="footer-pill footer-pill--action" href="#">Обратная связь</a>
+
+            <div class="footer-brand__address">
+              Республика Татарстан, г. Набережные Челны,<br />пр. Набережночелнинский, д.27Б, офис 95<br />ООО ХК «СОЮЗ»
+            </div>
+
+            <div class="footer-social" aria-label="Социальные сети">
+              <a href="#" aria-label="ВКонтакте"></a>
+              <a href="#" aria-label="Telegram"></a>
+            </div>
+
+            <div class="footer-brand__links">
+              <a href="#">Карта партнёра</a>
+              <a href="SoglasieCookie.html">Согласие на обработку файлов cookie</a>
+              <a href="PolitikaConfidencialnosti.html">Политика конфиденциальности и обработки персональных данных</a>
+            </div>
+          </div>
+          <div class="footer-col footer-col--catalog">
+            <h3 class="footer-col__title">Категории каталога</h3>
+            <ul>
+              <li><a href="#">Транспортные тележки</a></li>
+              <li><a href="#">Пластиковые ящики</a></li>
+              <li><a href="#">Складские лотки</a></li>
+              <li><a href="#">Неразборные пластиковые контейнеры</a></li>
+              <li><a href="#">Разборные пластиковые контейнеры</a></li>
+              <li><a href="#">Мусорные контейнеры и баки</a></li>
+              <li><a href="#">Пластиковые поддоны</a></li>
+              <li><a href="#">Полимерный лист</a></li>
+              <li><a href="#">Изотермические контейнеры</a></li>
+              <li><a href="#">Пластиковые бочки</a></li>
+              <li><a href="#">Вкладываемые контейнеры</a></li>
+              <li><a href="#">Складская техника</a></li>
+              <li><a href="#">Грузоподъемное оборудование</a></li>
+              <li><a href="#">Верстаки</a></li>
+              <li><a href="#">Емкости</a></li>
+              <li><a href="#">Дачная продукция</a></li>
+              <li><a href="#">Все для канализации</a></li>
+            </ul>
+          </div>
+          <div class="footer-col footer-col--company">
+            <ul>
+              <li><a href="#about">О компании</a></li>
+              <li><a href="#materials">Материалы</a></li>
+              <li><a href="#contacts">Контакты</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2025 ИСМА. Все права защищены.</span>
+          <span><a href="https://oxbox.ru/" target="_blank" rel="noopener noreferrer">Разработано в OXBOX</a></span>
+        </div>
+      </div>
+    </footer>
+
+    <div class="cookie-banner" id="cookieBanner" role="region" aria-label="Уведомление о cookie" hidden>
+      <span class="cookie-banner__icon" aria-hidden="true">
+        <svg width="48" height="48" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <mask id="cookieBiteMask">
+              <rect width="40" height="40" fill="#ffffff" />
+              <circle cx="29.7" cy="13.4" r="4.6" fill="#000000" />
+              <circle cx="32.9" cy="17.8" r="3.3" fill="#000000" />
+              <circle cx="26.7" cy="10.8" r="2.4" fill="#000000" />
+            </mask>
+          </defs>
+
+          <circle cx="20" cy="20" r="14" fill="#F13160" mask="url(#cookieBiteMask)" />
+          <circle cx="14.3" cy="14.1" r="1.7" fill="#A61F44" />
+          <circle cx="21.6" cy="12.6" r="1.6" fill="#A61F44" />
+          <circle cx="16.2" cy="19.4" r="1.5" fill="#A61F44" />
+          <circle cx="23.7" cy="20.2" r="1.9" fill="#A61F44" />
+          <circle cx="18.8" cy="25.5" r="1.7" fill="#A61F44" />
+
+          <circle cx="32.3" cy="13.7" r="1.2" fill="#FF7A9D" />
+          <circle cx="34.6" cy="17.1" r="1" fill="#FF7A9D" />
+          <circle cx="33.5" cy="10.2" r="1.1" fill="#FF7A9D" />
+        </svg>
+      </span>
+      <p class="cookie-banner__text">
+        Продолжая использовать этот сайт и нажимая кнопку «Принимаю», вы даете
+        <a href="SoglasieCookie.html" class="cookie-banner__link">согласие на обработку файлов cookie</a>
+        и использование Яндекс.Метрики.
+      </p>
+      <button type="button" class="cookie-banner__btn" id="cookieBannerAccept">Принимаю</button>
+    </div>
+
+    <script src="cookie-banner.js"></script>
+    <script src="mobile-menu.js"></script>
+    <script src="catalog-mega.js?v=5"></script>
+    <script>
+      (function () {
+        var row = document.getElementById("catalog-grid");
+        var more = document.querySelector(".section-cats__more");
+        var btn = document.querySelector(".section-cats__btn");
+        if (!row || !more || !btn) return;
+        var cards = row.querySelectorAll(".cat-card");
+        var mqMobile = window.matchMedia("(max-width: 768px)");
+        var expanded = false;
+
+        function catalogLimit() {
+          return mqMobile.matches ? 8 : 12;
+        }
+
+        function sync() {
+          var limit = catalogLimit();
+          if (cards.length <= limit) {
+            more.hidden = true;
+            for (var i = 0; i < cards.length; i++) {
+              cards[i].hidden = false;
+            }
+            expanded = false;
+            btn.textContent = "Смотреть все";
+            btn.setAttribute("aria-expanded", "false");
+            return;
+          }
+          more.hidden = false;
+          for (var i = 0; i < cards.length; i++) {
+            cards[i].hidden = i < limit ? false : !expanded;
+          }
+          btn.textContent = expanded ? "Свернуть" : "Смотреть все";
+          btn.setAttribute("aria-expanded", expanded ? "true" : "false");
+        }
+
+        btn.addEventListener("click", function () {
+          expanded = !expanded;
+          sync();
+        });
+
+        function onCatalogViewportChange() {
+          expanded = false;
+          sync();
+        }
+
+        if (typeof mqMobile.addEventListener === "function") {
+          mqMobile.addEventListener("change", onCatalogViewportChange);
+        } else if (typeof mqMobile.addListener === "function") {
+          mqMobile.addListener(onCatalogViewportChange);
+        }
+
+        function revealCard(el) {
+          if (!el || !row.contains(el)) return;
+          expanded = true;
+          sync();
+          requestAnimationFrame(function () {
+            requestAnimationFrame(function () {
+              el.scrollIntoView({ behavior: "smooth", block: "center" });
+            });
+          });
+        }
+
+        window.ismaCatalogReveal = revealCard;
+
+        function applyCatalogHash() {
+          var h = location.hash;
+          if (!h || h.indexOf("#catalog-") !== 0) return;
+          var id = h.slice(1);
+          var el = document.getElementById(id);
+          if (el) revealCard(el);
+        }
+
+        window.addEventListener("hashchange", applyCatalogHash);
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", applyCatalogHash);
+        } else {
+          applyCatalogHash();
+        }
+
+        sync();
+      })();
+
+      (function initFaqAccordion() {
+        var keyboardMode = false;
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Tab") keyboardMode = true;
+        });
+        document.addEventListener("mousedown", function () {
+          keyboardMode = false;
+        });
+        document.addEventListener(
+          "touchstart",
+          function () {
+            keyboardMode = false;
+          },
+          { passive: true }
+        );
+
+        function closeAllFaq() {
+          document.querySelectorAll(".faq-item").forEach(function (i) {
+            i.classList.remove("faq-item--open");
+            var b = i.querySelector(".faq-item__q");
+            if (b) b.setAttribute("aria-expanded", "false");
+          });
+        }
+
+        function openFaqItem(item) {
+          var b = item.querySelector(".faq-item__q");
+          if (!b) return;
+          closeAllFaq();
+          item.classList.add("faq-item--open");
+          b.setAttribute("aria-expanded", "true");
+        }
+
+        document.querySelectorAll(".faq-item").forEach(function (item) {
+          var btn = item.querySelector(".faq-item__q");
+          if (!btn) return;
+
+          btn.addEventListener("click", function () {
+            var wasOpen = item.classList.contains("faq-item--open");
+            closeAllFaq();
+            if (!wasOpen) {
+              item.classList.add("faq-item--open");
+              btn.setAttribute("aria-expanded", "true");
+            }
+          });
+
+          /* Tab на вопрос — сразу раскрыть, как будто открыли; мышь не трогаем (mousedown сбрасывает режим) */
+          btn.addEventListener("focusin", function () {
+            if (!keyboardMode) return;
+            if (item.classList.contains("faq-item--open")) return;
+            openFaqItem(item);
+          });
+        });
+      })();
+
+      function snapProductScrollToNearestCard(scrollEl) {
+        var cards = scrollEl.querySelectorAll(".product-card");
+        if (!cards.length) return;
+        var maxScroll = Math.max(0, scrollEl.scrollWidth - scrollEl.clientWidth);
+        if (maxScroll <= 1) return;
+        var sl = scrollEl.scrollLeft;
+        var srect = scrollEl.getBoundingClientRect();
+        var best = 0;
+        var bestDist = Infinity;
+        for (var i = 0; i < cards.length; i++) {
+          var card = cards[i];
+          var crect = card.getBoundingClientRect();
+          var target = sl + (crect.left - srect.left);
+          target = Math.max(0, Math.min(maxScroll, target));
+          var d = Math.abs(sl - target);
+          if (d < bestDist) {
+            bestDist = d;
+            best = target;
+          }
+        }
+        scrollEl.scrollLeft = best;
+      }
+
+      function initProductCarousel(scrollId, stripId) {
+        var scroll = document.getElementById(scrollId);
+        var strip = document.getElementById(stripId);
+        if (!scroll || !strip) return;
+        var fill = strip.querySelector(".product-strip__fill");
+        var track = strip.querySelector(".product-strip__track");
+        var hitArea = strip.querySelector(".product-strip__hit-area");
+        if (!fill || !track) return;
+        var hitTarget = hitArea || track;
+
+        function getMetrics() {
+          var cw = scroll.clientWidth;
+          var sw = scroll.scrollWidth;
+          var sl = scroll.scrollLeft;
+          var maxScroll = Math.max(0, sw - cw);
+          var tw = track.offsetWidth || 353;
+          var thumbW = maxScroll <= 1 ? tw : Math.max(2, (cw / sw) * tw);
+          var maxLeft = Math.max(0, tw - thumbW);
+          return {
+            sw: sw,
+            sl: sl,
+            maxScroll: maxScroll,
+            tw: tw,
+            thumbW: thumbW,
+            maxLeft: maxLeft,
+          };
+        }
+
+        function updateStrip() {
+          var m = getMetrics();
+          if (m.maxScroll <= 1 || m.sw <= 0) {
+            fill.style.width = m.tw + "px";
+            fill.style.left = "0";
+            return;
+          }
+          var posRatio = m.maxScroll > 0 ? m.sl / m.maxScroll : 0;
+          var leftPx = posRatio * m.maxLeft;
+          leftPx = Math.max(0, Math.min(m.maxLeft, leftPx));
+          fill.style.width = m.thumbW + "px";
+          fill.style.left = leftPx + "px";
+        }
+
+        function rafUpdate() {
+          window.requestAnimationFrame(updateStrip);
+        }
+
+        scroll.addEventListener("scroll", rafUpdate, { passive: true });
+
+        (function initDesktopDragScroll() {
+          var dragPointerId = null;
+          var dragStartX = 0;
+          var dragStartScrollLeft = 0;
+          var dragMoved = false;
+          var DRAG_THRESHOLD = 4;
+
+          function isDesktop() {
+            return window.matchMedia("(min-width: 769px)").matches;
+          }
+
+          function onPointerDown(e) {
+            if (!isDesktop()) return;
+            if (e.pointerType === "mouse" && e.button !== 0) return;
+            if (scroll.scrollWidth <= scroll.clientWidth + 1) return;
+            dragPointerId = e.pointerId;
+            dragStartX = e.clientX;
+            dragStartScrollLeft = scroll.scrollLeft;
+            dragMoved = false;
+          }
+
+          function onPointerMove(e) {
+            if (dragPointerId === null || e.pointerId !== dragPointerId) return;
+            if (!isDesktop()) return;
+            var deltaFromStart = e.clientX - dragStartX;
+            if (!dragMoved && Math.abs(deltaFromStart) < DRAG_THRESHOLD) return;
+            if (!dragMoved) {
+              dragMoved = true;
+              scroll.classList.add("is-drag-scroll");
+              try {
+                scroll.setPointerCapture(e.pointerId);
+              } catch (err) {}
+            }
+            e.preventDefault();
+            var dx = dragStartX - e.clientX;
+            var maxScroll = Math.max(0, scroll.scrollWidth - scroll.clientWidth);
+            scroll.scrollLeft = Math.max(0, Math.min(maxScroll, dragStartScrollLeft + dx));
+            rafUpdate();
+          }
+
+          function onPointerUp(e) {
+            if (dragPointerId === null || e.pointerId !== dragPointerId) return;
+            dragPointerId = null;
+            scroll.classList.remove("is-drag-scroll");
+            try {
+              scroll.releasePointerCapture(e.pointerId);
+            } catch (err) {}
+            if (dragMoved) {
+              snapProductScrollToNearestCard(scroll);
+              rafUpdate();
+              scroll.addEventListener(
+                "click",
+                function stopClick(ev) {
+                  ev.preventDefault();
+                  ev.stopPropagation();
+                  scroll.removeEventListener("click", stopClick, true);
+                },
+                true
+              );
+            }
+          }
+
+          scroll.addEventListener("pointerdown", onPointerDown);
+          scroll.addEventListener("pointermove", onPointerMove, { passive: false });
+          scroll.addEventListener("pointerup", onPointerUp);
+          scroll.addEventListener("pointercancel", onPointerUp);
+        })();
+
+        window.addEventListener("resize", rafUpdate);
+        window.addEventListener("load", rafUpdate);
+        scroll.querySelectorAll("img").forEach(function (img) {
+          if (img.complete) return;
+          img.addEventListener("load", rafUpdate);
+        });
+        if (window.ResizeObserver) {
+          new ResizeObserver(rafUpdate).observe(scroll);
+          new ResizeObserver(rafUpdate).observe(track);
+        }
+        rafUpdate();
+        setTimeout(rafUpdate, 100);
+        setTimeout(rafUpdate, 500);
+
+        var dragging = false;
+        var dragPointerId = null;
+        var dragStartClientX = 0;
+        var dragStartScrollLeft = 0;
+
+        function onPointerDown(e) {
+          if (e.pointerType === "mouse" && e.button !== 0) return;
+          var m = getMetrics();
+          if (m.maxScroll <= 1) return;
+          var rect = track.getBoundingClientRect();
+          var x = e.clientX - rect.left;
+          x = Math.max(0, Math.min(m.tw, x));
+          var thumbLeft = (m.sl / m.maxScroll) * m.maxLeft;
+
+          if (x >= thumbLeft && x <= thumbLeft + m.thumbW) {
+            e.preventDefault();
+            dragging = true;
+            dragPointerId = e.pointerId;
+            dragStartClientX = e.clientX;
+            dragStartScrollLeft = m.sl;
+            strip.classList.add("is-dragging");
+            try {
+              hitTarget.setPointerCapture(e.pointerId);
+            } catch (err) {}
+          } else {
+            e.preventDefault();
+            var newLeft = x - m.thumbW / 2;
+            newLeft = Math.max(0, Math.min(m.maxLeft, newLeft));
+            scroll.scrollLeft = (newLeft / m.maxLeft) * m.maxScroll;
+            snapProductScrollToNearestCard(scroll);
+            rafUpdate();
+          }
+        }
+
+        function onPointerMove(e) {
+          if (!dragging || e.pointerId !== dragPointerId) return;
+          var m = getMetrics();
+          if (m.maxScroll <= 1) return;
+          e.preventDefault();
+          var dx = e.clientX - dragStartClientX;
+          var dScroll = (dx / m.maxLeft) * m.maxScroll;
+          scroll.scrollLeft = Math.max(0, Math.min(m.maxScroll, dragStartScrollLeft + dScroll));
+          rafUpdate();
+        }
+
+        function onPointerUp(e) {
+          if (!dragging || e.pointerId !== dragPointerId) return;
+          dragging = false;
+          dragPointerId = null;
+          strip.classList.remove("is-dragging");
+          try {
+            hitTarget.releasePointerCapture(e.pointerId);
+          } catch (err) {}
+          snapProductScrollToNearestCard(scroll);
+          rafUpdate();
+        }
+
+        hitTarget.addEventListener("pointerdown", onPointerDown, { passive: false });
+        hitTarget.addEventListener("pointermove", onPointerMove, { passive: false });
+        hitTarget.addEventListener("pointerup", onPointerUp);
+        hitTarget.addEventListener("pointercancel", onPointerUp);
+      }
+
+      initProductCarousel("novelties-scroll", "novelties-strip");
+      initProductCarousel("popular-scroll", "popular-strip");
+
+      (function () {
+        var hero = document.querySelector(".hero-main");
+        if (!hero) return;
+        var cards = hero.querySelectorAll(".hero-main__card");
+        var prev = hero.querySelector(".hero-main__nav-btn--prev");
+        var next = hero.querySelector(".hero-main__nav-btn--next");
+        var progressTrack = hero.querySelector(".hero-main__progress-track");
+        if (!cards.length || !prev || !next) return;
+
+        var current = 0;
+        var swipeStartX = 0;
+        var swipeActive = false;
+        var progressSegments = [];
+
+        if (progressTrack) {
+          progressTrack.innerHTML = "";
+          for (var s = 0; s < cards.length; s++) {
+            var seg = document.createElement("span");
+            seg.className = "hero-main__progress-segment";
+            seg.setAttribute("aria-hidden", "true");
+            progressTrack.appendChild(seg);
+            progressSegments.push(seg);
+          }
+        }
+
+        function render() {
+          cards.forEach(function (card, idx) {
+            var on = idx === current;
+            card.classList.toggle("is-active", on);
+            card.setAttribute("aria-hidden", on ? "false" : "true");
+          });
+          progressSegments.forEach(function (seg, idx) {
+            seg.classList.toggle("is-active", idx === current);
+          });
+        }
+
+        function go(step) {
+          current = (current + step + cards.length) % cards.length;
+          render();
+        }
+
+        prev.addEventListener("click", function () {
+          go(-1);
+        });
+
+        next.addEventListener("click", function () {
+          go(1);
+        });
+
+        [prev, next].forEach(function (btn) {
+          btn.addEventListener("mousedown", function () {
+            btn.classList.add("is-pressed");
+          });
+          btn.addEventListener("mouseup", function () {
+            btn.classList.remove("is-pressed");
+          });
+          btn.addEventListener("mouseleave", function () {
+            btn.classList.remove("is-pressed");
+          });
+          btn.addEventListener(
+            "touchstart",
+            function () {
+              btn.classList.add("is-pressed");
+            },
+            { passive: true }
+          );
+          btn.addEventListener("touchend", function () {
+            btn.classList.remove("is-pressed");
+          });
+          btn.addEventListener("touchcancel", function () {
+            btn.classList.remove("is-pressed");
+          });
+        });
+
+        hero.addEventListener(
+          "touchstart",
+          function (e) {
+            if (e.touches.length !== 1) return;
+            swipeActive = true;
+            swipeStartX = e.touches[0].clientX;
+          },
+          { passive: true }
+        );
+
+        hero.addEventListener(
+          "touchend",
+          function (e) {
+            if (!swipeActive) return;
+            swipeActive = false;
+            var t = e.changedTouches[0];
+            var dx = t.clientX - swipeStartX;
+            var threshold = 48;
+            if (dx <= -threshold) go(1);
+            else if (dx >= threshold) go(-1);
+          },
+          { passive: true }
+        );
+
+        hero.addEventListener("touchcancel", function () {
+          swipeActive = false;
+        });
+
+        render();
+      })();
+
+      (function () {
+        function setPressed(btn, on) {
+          btn.classList.toggle("is-pressed", on);
+        }
+
+        document.querySelectorAll(".qty").forEach(function (qty) {
+          var span = qty.querySelector(":scope > span");
+          var buttons = qty.querySelectorAll("button");
+          if (!span || buttons.length < 2) return;
+          var minus = buttons[0];
+          var plus = buttons[1];
+
+          minus.addEventListener("click", function () {
+            var n = parseInt(span.textContent, 10);
+            if (isNaN(n) || n < 1) n = 1;
+            if (n > 1) span.textContent = String(n - 1);
+          });
+
+          plus.addEventListener("click", function () {
+            var n = parseInt(span.textContent, 10);
+            if (isNaN(n) || n < 1) n = 1;
+            if (n < 9999) span.textContent = String(n + 1);
+          });
+
+          [minus, plus].forEach(function (btn) {
+            btn.addEventListener("mousedown", function () {
+              setPressed(btn, true);
+            });
+            btn.addEventListener("mouseup", function () {
+              setPressed(btn, false);
+            });
+            btn.addEventListener("mouseleave", function () {
+              setPressed(btn, false);
+            });
+            btn.addEventListener("touchstart", function () {
+              setPressed(btn, true);
+            }, { passive: true });
+            btn.addEventListener("touchend", function () {
+              setPressed(btn, false);
+            });
+            btn.addEventListener("touchcancel", function () {
+              setPressed(btn, false);
+            });
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>

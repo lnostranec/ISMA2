@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Вкладываемый ящик 600×400×235 — ИСМА</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css?v=103" />
+  </head>
+  <body class="page-katalog page-tovar" id="top">
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <div class="brand">
+          <a href="index.html" class="logo" aria-label="ИСМА на главную">
+            <img class="logo__img" src="assets/исма.svg" width="144" height="49" alt="ИСМА" />
+          </a>
+          <span class="brand__divider" aria-hidden="true"></span>
+          <div class="brand__sub" aria-label="Официальный дистрибьютор iPlast">
+            <span>Официальный</span>
+            <span>дистрибьютор <b><span class="brand__sub-accent">iPlast</span></b></span>
+          </div>
+        </div>
+        <nav class="nav" aria-label="Основное меню">
+          <div class="nav__link nav__link--catalog">
+            <button
+              type="button"
+              id="catalogMegaOpen"
+              class="nav__catalog-btn"
+              aria-label="Открыть каталог"
+              aria-haspopup="true"
+              aria-expanded="false"
+              aria-controls="catalogMega"
+            >
+              <span class="nav__catalog-eq" aria-hidden="true"></span>
+            </button>
+            <a class="nav__catalog-text" href="katalog.html">Каталог</a>
+          </div>
+          <a class="nav__link" href="index.html#about">О компании</a>
+          <a class="nav__link" href="index.html#materials">Материалы</a>
+          <a class="nav__link" href="index.html#contacts">Контакты</a>
+        </nav>
+        <div class="header-tools">
+          <a class="header-tools__phone" href="tel:+79376236888">
+            <span class="header-tools__phone-icon" aria-hidden="true">
+              <svg
+                class="header-tools__phone-svg header-tools__phone-svg--desktop"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                />
+              </svg>
+              <img
+                class="header-tools__phone-img header-tools__phone-img--mobile"
+                src="assets/phone-icon-mobile.png"
+                width="14"
+                height="14"
+                alt=""
+              />
+            </span>
+            <span class="header-tools__phone-text">+7 937 623 68 88</span>
+          </a>
+          <button type="button" class="header-tools__icon" aria-label="Поиск">
+            <svg
+              class="header-tools__icon-svg header-tools__icon-svg--desktop"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <circle cx="11" cy="11" r="7" />
+              <path d="M20 20l-3-3" stroke-linecap="round" />
+            </svg>
+            <img
+              class="header-tools__icon-img header-tools__icon-img--mobile"
+              src="assets/search-icon-mobile.png"
+              width="20"
+              height="20"
+              alt=""
+            />
+          </button>
+          <a class="header-tools__pill" href="#cart" aria-label="Корзина">
+            <span class="header-tools__pill-icon" aria-hidden="true">
+              <img class="header-tools__pill-img header-tools__pill-img--desktop" src="assets/Korzina.webp" width="20" height="20" alt="" />
+              <img class="header-tools__pill-img header-tools__pill-img--mobile" src="assets/cart-icon-mobile.png" width="20" height="20" alt="" />
+            </span>
+            <span class="header-tools__pill-text">Корзина</span>
+            <span class="header-tools__pill-badge" aria-label="0 товаров">0</span>
+          </a>
+          <button type="button" class="header-tools__menu" aria-label="Открыть меню">
+            <img class="header-tools__menu-img" src="assets/Burger.png" width="15" height="8" alt="" aria-hidden="true" />
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="catalog-mega" id="catalogMega" hidden aria-hidden="true">
+      <div class="catalog-mega__backdrop"></div>
+      <div class="container catalog-mega__sheet-wrap">
+        <div class="catalog-mega__sheet" role="dialog" aria-modal="true" aria-labelledby="catalogMegaTitle">
+          <div class="catalog-mega__inner">
+            <h2 id="catalogMegaTitle" class="visually-hidden">Каталог</h2>
+            <div class="catalog-mega__layout">
+              <aside class="catalog-mega__sidebar" aria-label="Разделы каталога">
+                <ul class="catalog-mega__primary">
+                  <li><a href="#" data-mega-panel="full">Пластиковые ящики</a></li>
+                  <li><a href="#" data-mega-panel="compact">Пластиковые ящики</a></li>
+                  <li><a href="#" data-mega-panel="empty">Складские лотки</a></li>
+                  <li><a href="#" data-mega-panel="empty">Неразборные пластиковые контейнеры</a></li>
+                  <li><a href="#" data-mega-panel="empty">Разборные пластиковые контейнеры</a></li>
+                  <li><a href="#" data-mega-panel="empty">Мусорные контейнеры и баки</a></li>
+                  <li><a href="#" data-mega-panel="empty">Пластиковые поддоны</a></li>
+                  <li><a href="#" data-mega-panel="empty">Полимерный лист</a></li>
+                  <li><a href="#" data-mega-panel="empty">Изотермические контейнеры</a></li>
+                </ul>
+              </aside>
+              <div class="catalog-mega__main">
+                <div class="catalog-mega__cols">
+                  <div class="catalog-mega__col">
+                    <ul class="catalog-mega__sub">
+                      <li><a href="katalog.html">Пищевые пластиковые ящики</a></li>
+                      <li><a href="#">Евроконтейнеры ЕС</a></li>
+                      <li><a href="#">Вкладываемые ящики INSTORE</a></li>
+                      <li><a href="#">Складные ящики</a></li>
+                      <li><a href="#">Контейнеры KLT</a></li>
+                      <li><a href="#">Универсальные ящики</a></li>
+                      <li><a href="#">Комплектующие для ящиков</a></li>
+                    </ul>
+                  </div>
+                  <div class="catalog-mega__col">
+                    <ul class="catalog-mega__sub">
+                      <li><a href="#">Пищевые пластиковые ящики</a></li>
+                      <li><a href="#">Евроконтейнеры ЕС</a></li>
+                      <li><a href="#">Вкладываемые ящики INSTORE</a></li>
+                      <li><a href="#">Складные ящики</a></li>
+                      <li><a href="#">Контейнеры KLT</a></li>
+                      <li><a href="#">Универсальные ящики</a></li>
+                      <li><a href="#">Комплектующие для ящиков</a></li>
+                    </ul>
+                  </div>
+                  <div class="catalog-mega__col">
+                    <ul class="catalog-mega__sub">
+                      <li><a href="#">Пищевые пластиковые ящики</a></li>
+                      <li><a href="#">Евроконтейнеры ЕС</a></li>
+                      <li><a href="#">Вкладываемые ящики INSTORE</a></li>
+                      <li><a href="#">Складные ящики</a></li>
+                      <li><a href="#">Контейнеры KLT</a></li>
+                      <li><a href="#">Универсальные ящики</a></li>
+                      <li><a href="#">Комплектующие для ящиков</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true" hidden>
+      <div class="mobile-menu__backdrop"></div>
+      <div class="mobile-menu__panel">
+        <a href="index.html" class="mobile-menu__brand" aria-label="ИСМА на главную">
+          <img class="logo__img mobile-menu__logo" src="assets/logofooter.png" alt="ИСМА" />
+        </a>
+        <button type="button" class="mobile-menu__close" aria-label="Закрыть меню">
+          <svg viewBox="0 0 11 11" aria-hidden="true">
+            <path d="M1 1L10 10" />
+            <path d="M10 1L1 10" />
+          </svg>
+        </button>
+        <nav class="mobile-menu__links" aria-label="Мобильное меню">
+          <div class="mobile-menu__title">Категории каталога</div>
+          <div class="mobile-menu__catalog">
+            <a href="katalog.html">Пластиковые ящики</a>
+            <a href="#">Складские лотки</a>
+            <a href="#">Неразборные пластиковые контейнеры</a>
+            <a href="#">Разборные пластиковые контейнеры</a>
+          </div>
+          <div class="mobile-menu__primary">
+            <a href="index.html#about">О компании</a>
+            <a href="index.html#materials">Материалы</a>
+            <a href="index.html#contacts">Контакты</a>
+          </div>
+          <a class="mobile-menu__feedback" href="index.html#contacts">Обратная связь</a>
+        </nav>
+      </div>
+    </div>
+
+    <main class="product-page">
+      <div class="container">
+        <nav class="catalog-page__breadcrumbs product-page__breadcrumbs" aria-label="Хлебные крошки">
+          <a href="index.html">Главная</a>
+          <span class="catalog-page__breadcrumbs-muted" aria-hidden="true">•</span>
+          <a href="katalog.html">Пластиковые ящики</a>
+          <span class="catalog-page__breadcrumbs-muted" aria-hidden="true">•</span>
+          <span class="catalog-page__breadcrumbs-muted">Пищевые пластиковые ящики</span>
+        </nav>
+
+        <h1 class="product-page__title">
+          Вкладываемый ящик 600×400×235 с усиленным дном (KVR 6422)
+        </h1>
+
+        <div class="product-detail__top">
+          <div class="product-detail__left">
+            <div class="product-detail__gallery">
+              <div class="product-detail__figure">
+                <div class="product-detail__badge-wrap">
+                  <span class="badge badge--new">Новинка</span>
+                </div>
+                <button type="button" class="product-detail__zoom" aria-label="Увеличить фото">
+                  <img
+                    class="product-detail__main-img"
+                    src="assets/Tazik.webp"
+                    width="354"
+                    height="284"
+                    alt="Вкладываемый ящик 600×400×235"
+                  />
+                </button>
+              </div>
+              <div class="product-detail__thumbs" role="list">
+                <button type="button" class="product-detail__thumb is-active" aria-current="true" aria-label="Вид 1">
+                  <img src="assets/Tazik.webp" width="64" height="52" alt="" />
+                </button>
+                <button type="button" class="product-detail__thumb" aria-label="Вид 2">
+                  <img src="assets/Tazik.webp" width="64" height="52" alt="" />
+                </button>
+                <button type="button" class="product-detail__thumb" aria-label="Вид 3">
+                  <img src="assets/Tazik.webp" width="64" height="52" alt="" />
+                </button>
+              </div>
+            </div>
+            <aside class="product-detail__buy" aria-label="Заказ">
+              <div class="product-detail__buy-inner">
+                <div class="product-detail__order-sku">Арт.: 2.355F.65 KV 5328</div>
+                <div class="product-detail__order-spacer-top" aria-hidden="true"></div>
+                <div class="product-detail__order-price">4 053 ₽</div>
+                <div class="product-detail__order-row">
+                  <div class="qty">
+                    <button type="button" aria-label="Уменьшить"><span class="qty__btn-text qty__btn-text--minus" aria-hidden="true"></span></button>
+                    <span>1</span>
+                    <button type="button" aria-label="Увеличить"><span class="qty__btn-text qty__btn-text--plus" aria-hidden="true"></span></button>
+                  </div>
+                  <button type="button" class="btn-cart">В корзину</button>
+                </div>
+                <div class="product-detail__order-bottom">
+                  <div class="product-detail__order-spacer" aria-hidden="true"></div>
+                  <div class="product-detail__order-line" aria-hidden="true"></div>
+                  <button type="button" class="product-detail__order-quick">Быстрый заказ</button>
+                </div>
+              </div>
+            </aside>
+          </div>
+
+          <div class="product-detail__middle">
+            <div class="product-detail__tabs" role="tablist" aria-label="Раздел карточки">
+              <button type="button" class="product-detail__tab is-active" role="tab" aria-selected="true" data-scroll-target="product-specs">
+                Характеристики
+              </button>
+              <button type="button" class="product-detail__tab" role="tab" aria-selected="false" data-scroll-target="product-description">
+                Описание
+              </button>
+              <button type="button" class="product-detail__tab" role="tab" aria-selected="false" data-scroll-target="product-delivery">
+                Условия доставки
+              </button>
+            </div>
+            <div id="product-specs" class="product-detail__specs-block" tabindex="-1">
+              <div class="product-detail__spec-list">
+                <div class="product-detail__spec-row">
+                  <span class="product-detail__spec-name">Длина, мм</span>
+                  <span class="product-detail__spec-val">600</span>
+                </div>
+                <div class="product-detail__spec-row">
+                  <span class="product-detail__spec-name">Ширина, мм</span>
+                  <span class="product-detail__spec-val">400</span>
+                </div>
+                <div class="product-detail__spec-row">
+                  <span class="product-detail__spec-name">Высота, мм</span>
+                  <span class="product-detail__spec-val">235</span>
+                </div>
+                <div class="product-detail__spec-row">
+                  <span class="product-detail__spec-name">Вес, кг</span>
+                  <span class="product-detail__spec-val">1,94</span>
+                </div>
+                <div class="product-detail__spec-row">
+                  <span class="product-detail__spec-name">Статическая нагрузка, кг</span>
+                  <span class="product-detail__spec-val">50</span>
+                </div>
+                <div class="product-detail__spec-row">
+                  <span class="product-detail__spec-name">Объём, литр</span>
+                  <span class="product-detail__spec-val">40</span>
+                </div>
+                <div class="product-detail__spec-row">
+                  <span class="product-detail__spec-name">Максимальная нагрузка, кг</span>
+                  <span class="product-detail__spec-val">150–200</span>
+                </div>
+                <div class="product-detail__spec-row">
+                  <span class="product-detail__spec-name">Максимальная загрузка, кг</span>
+                  <span class="product-detail__spec-val">50</span>
+                </div>
+                <div class="product-detail__spec-row">
+                  <span class="product-detail__spec-name">Материал</span>
+                  <span class="product-detail__spec-val">PP</span>
+                </div>
+                <div class="product-detail__spec-row">
+                  <span class="product-detail__spec-name">Температура</span>
+                  <span class="product-detail__spec-val">−20/+45°C</span>
+                </div>
+                <div class="product-detail__spec-row">
+                  <span class="product-detail__spec-name">Температура чистки (мойки)</span>
+                  <span class="product-detail__spec-val">+90°C</span>
+                </div>
+                <div class="product-detail__spec-row">
+                  <span class="product-detail__spec-name">Страна производства</span>
+                  <span class="product-detail__spec-val">Россия</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-detail__after-specs">
+              <section class="product-detail__content-section" id="product-description" aria-labelledby="product-desc-heading">
+                <h2 id="product-desc-heading" class="product-detail__section-title">Описание</h2>
+                <div class="product-detail__prose">
+                  <p>
+                    Отличное решение для комплектации товара на складских комплексах, фармацевтических предприятиях и
+                    последующей доставки заказов до конечного потребителя. Идеально работает на автоматизированных линиях и
+                    конвейерах. Предназначены для работы с пищевыми продуктами. В порожнем виде экономят до 70% пространства.
+                  </p>
+                  <p>
+                    Широкий модельный ряд контейнеров предоставляет возможность для организации эффективных логистических
+                    задач в фармацевтической, складской, транспортной, пищевой промышленностях.
+                  </p>
+                  <p>
+                    Первичное сырье обеспечивает высокие прочностные характеристики. Контейнеры удобны в использовании,
+                    устойчиво штабелируются друг на друга. Каждый из контейнеров может комплектоваться крышкой. Отлично
+                    подходят для автоматизированных линий производств.
+                  </p>
+                  <p>
+                    Экономия складских площадей до 70% и эффективная обратная логистика достигается за счёт вкладываемости
+                    контейнеров. Контейнеры с распашными крышками в стопке.
+                  </p>
+                </div>
+              </section>
+
+              <section class="product-detail__content-section" id="product-delivery" aria-labelledby="product-delivery-heading">
+                <h2 id="product-delivery-heading" class="product-detail__section-title">Условия доставки</h2>
+                <div class="product-detail__prose">
+                  <h3 class="product-detail__subsection-title">Самовывоз</h3>
+                  <p>Республика Татарстан, г. Набережные Челны, пр. Набережночелнинский, д. 27а/5</p>
+                  <p>Режим работы ПН–ПТ 8:00–17:00</p>
+                  <h3 class="product-detail__subsection-title">Доставка в регионы</h3>
+                  <p>Доставка ТК по России за счёт клиента</p>
+                </div>
+              </section>
+
+              <p class="product-detail__disclaimer" id="product-disclaimer">
+                Указанная информация не является публичной офертой. Производитель оставляет за собой право изменять
+                характеристики, внешний вид, комплектацию товара и место его производства без уведомления. Цвет, упаковку
+                товара, возможные опции, сроки производства, наличие на складах уточняйте при согласовании заказа с
+                менеджером компании ИСМА.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer" id="contacts">
+      <div class="container">
+        <div class="site-footer__head">
+          <div class="site-footer__head-inner">
+            <div class="site-footer__head-top">
+              <a href="index.html" class="logo" aria-label="ИСМА на главную">
+                <img class="logo__img logo__img--footer" src="assets/исма.svg" alt="ИСМА" />
+              </a>
+              <a class="footer-to-top" href="#top">Наверх</a>
+            </div>
+            <div class="site-footer__head-line" aria-hidden="true"></div>
+          </div>
+        </div>
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-brand__company">ООО «Исма»</div>
+            <div class="footer-brand__contacts">
+              <a class="footer-pill" href="tel:+79376236888">8 (937) 623-68-88</a>
+              <a class="footer-pill" href="tel:+78552399957">8 (8552) 39-99-57</a>
+              <a class="footer-pill" href="mailto:isma10@mail.ru">isma10@mail.ru</a>
+            </div>
+            <a class="footer-pill footer-pill--action" href="index.html#contacts">Обратная связь</a>
+            <div class="footer-brand__address">Республика Татарстан, г. Набережные Челны,<br />пр. Набережночелнинский, д.27Б, офис 95<br />ООО ХК «СОЮЗ»</div>
+            <div class="footer-social" aria-label="Социальные сети">
+              <a href="#" aria-label="ВКонтакте"></a>
+              <a href="#" aria-label="Telegram"></a>
+            </div>
+            <div class="footer-brand__links">
+              <a href="#">Карта партнёра</a>
+              <a href="SoglasieCookie.html">Согласие на обработку файлов cookie</a>
+              <a href="PolitikaConfidencialnosti.html">Политика конфиденциальности и обработки персональных данных</a>
+            </div>
+          </div>
+          <div class="footer-col footer-col--catalog">
+            <h3 class="footer-col__title">Категории каталога</h3>
+            <ul>
+              <li><a href="#">Транспортные тележки</a></li>
+              <li><a href="#">Пластиковые ящики</a></li>
+              <li><a href="#">Складские лотки</a></li>
+              <li><a href="#">Неразборные пластиковые контейнеры</a></li>
+              <li><a href="#">Разборные пластиковые контейнеры</a></li>
+              <li><a href="#">Мусорные контейнеры и баки</a></li>
+              <li><a href="#">Пластиковые поддоны</a></li>
+              <li><a href="#">Полимерный лист</a></li>
+              <li><a href="#">Изотермические контейнеры</a></li>
+              <li><a href="#">Пластиковые бочки</a></li>
+              <li><a href="#">Вкладываемые контейнеры</a></li>
+              <li><a href="#">Складская техника</a></li>
+              <li><a href="#">Грузоподъемное оборудование</a></li>
+              <li><a href="#">Верстаки</a></li>
+              <li><a href="#">Емкости</a></li>
+              <li><a href="#">Дачная продукция</a></li>
+              <li><a href="#">Все для канализации</a></li>
+            </ul>
+          </div>
+          <div class="footer-col footer-col--company">
+            <ul>
+              <li><a href="index.html#about">О компании</a></li>
+              <li><a href="index.html#materials">Материалы</a></li>
+              <li><a href="index.html#contacts">Контакты</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2025 ИСМА. Все права защищены.</span>
+          <span><a href="https://oxbox.ru/" target="_blank" rel="noopener noreferrer">Разработано в OXBOX</a></span>
+        </div>
+      </div>
+    </footer>
+
+    <div class="cookie-banner" id="cookieBanner" role="region" aria-label="Уведомление о cookie" hidden>
+      <span class="cookie-banner__icon" aria-hidden="true">
+        <svg width="48" height="48" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <mask id="cookieBiteMaskTovar">
+              <rect width="40" height="40" fill="#ffffff" />
+              <circle cx="29.7" cy="13.4" r="4.6" fill="#000000" />
+              <circle cx="32.9" cy="17.8" r="3.3" fill="#000000" />
+              <circle cx="26.7" cy="10.8" r="2.4" fill="#000000" />
+            </mask>
+          </defs>
+          <circle cx="20" cy="20" r="14" fill="#F13160" mask="url(#cookieBiteMaskTovar)" />
+          <circle cx="14.3" cy="14.1" r="1.7" fill="#A61F44" />
+          <circle cx="21.6" cy="12.6" r="1.6" fill="#A61F44" />
+          <circle cx="16.2" cy="19.4" r="1.5" fill="#A61F44" />
+          <circle cx="23.7" cy="20.2" r="1.9" fill="#A61F44" />
+          <circle cx="18.8" cy="25.5" r="1.7" fill="#A61F44" />
+        </svg>
+      </span>
+      <p class="cookie-banner__text">
+        Продолжая использовать этот сайт и нажимая кнопку «Принимаю», вы даете
+        <a href="SoglasieCookie.html" class="cookie-banner__link">согласие на обработку файлов cookie</a>
+        и использование Яндекс.Метрики.
+      </p>
+      <button type="button" class="cookie-banner__btn" id="cookieBannerAccept">Принимаю</button>
+    </div>
+
+    <script src="cookie-banner.js"></script>
+    <script src="mobile-menu.js"></script>
+    <script src="catalog-mega.js?v=5"></script>
+    <script>
+      (function () {
+        var tabs = document.querySelectorAll(".product-detail__tab[data-scroll-target]");
+        tabs.forEach(function (tab) {
+          tab.addEventListener("click", function () {
+            var targetId = tab.getAttribute("data-scroll-target");
+            var el = targetId ? document.getElementById(targetId) : null;
+            tabs.forEach(function (t) {
+              var on = t === tab;
+              t.classList.toggle("is-active", on);
+              t.setAttribute("aria-selected", on ? "true" : "false");
+            });
+            if (el) {
+              el.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+          });
+        });
+
+        var mainImg = document.querySelector(".product-detail__main-img");
+        var thumbBtns = document.querySelectorAll(".product-detail__thumb");
+        if (mainImg && thumbBtns.length) {
+          thumbBtns.forEach(function (btn) {
+            btn.addEventListener("click", function () {
+              var img = btn.querySelector("img");
+              if (!img) return;
+              thumbBtns.forEach(function (b) {
+                b.classList.toggle("is-active", b === btn);
+                b.setAttribute("aria-current", b === btn ? "true" : "false");
+              });
+              mainImg.src = img.src;
+            });
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>
