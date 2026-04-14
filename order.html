@@ -1,18 +1,18 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Политика конфиденциальности</title>
+    <title>Оформление заказа — ИСМА</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css?v=34" />
+    <link rel="stylesheet" href="style.css?v=84" />
   </head>
-  <body>
+  <body id="top" class="page-order">
     <header class="site-header">
       <div class="container site-header__inner">
         <div class="brand">
@@ -86,7 +86,7 @@
               />
             </span>
             <span class="header-tools__pill-text">Корзина</span>
-            <span class="header-tools__pill-badge" aria-label="0 товаров">0</span>
+            <span class="header-tools__pill-badge" aria-label="2 товара">2</span>
           </a>
           <button type="button" class="header-tools__menu" aria-label="Открыть меню">
             <svg width="15" height="8" viewBox="0 0 14.67 8" fill="none" aria-hidden="true">
@@ -112,33 +112,153 @@
       </div>
     </div>
 
-    <main class="legal-page">
-      <div class="container">
-        <article class="legal-card">
-          <h1 class="legal-title">Заголовок 1</h1>
-          <p class="legal-text">
-            Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Но текст он
-            предложения обеспечивает продолжил всеми текста запятой, решила образ за снова грустный пунктуация выйти
-            языкового деревни своего на берегу жизни речью рукопись всемогущая свою большого рекламных все взобравшись?
-            Ему рукописи рекламных одна продолжил снова которой, реторический вдали букв власти.0
-          </p>
+    <main class="order-page">
+      <section class="basket-breadcrumbs">
+        <div class="container">
+          <nav class="catalog-page__breadcrumbs" aria-label="Хлебные крошки">
+            <a href="index.html">Главная</a>
+            <span class="catalog-page__breadcrumbs-muted" aria-hidden="true">•</span>
+            <span class="catalog-page__breadcrumbs-muted">Корзина</span>
+          </nav>
+        </div>
+      </section>
 
-          <h2 class="legal-subtitle">Заголовок 2</h2>
-          <p class="legal-text">
-            Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Но текст он
-            предложения обеспечивает продолжил всеми текста запятой, решила образ за снова грустный пунктуация выйти
-            языкового деревни своего на берегу жизни речью рукопись всемогущая свою большого рекламных все взобравшись?
-            Ему рукописи рекламных одна продолжил снова которой, реторический вдали букв власти.0
-          </p>
+      <section class="order-demo">
+        <div class="container">
+          <h1>Оформление заказа</h1>
+          <form class="order-demo__wrapper" action="#">
+            <div class="order-demo__main">
+              <section class="order-box">
+                <h2>Контактная информация</h2>
+                <div class="order-row">
+                  <div class="input input-wrapper required">
+                    <label class="input-label" for="order-name">Имя</label>
+                    <input id="order-name" type="text" required />
+                  </div>
+                  <div class="input input-wrapper required">
+                    <label class="input-label" for="order-phone">Телефон</label>
+                    <input id="order-phone" type="tel" required />
+                  </div>
+                  <div class="input input-wrapper required">
+                    <label class="input-label" for="order-email">E-mail</label>
+                    <input id="order-email" type="email" required />
+                  </div>
+                </div>
+              </section>
 
-          <h3 class="legal-subtitle">Заголовок 3</h3>
-          <ul class="legal-list">
-            <li>Далеко-далеко за словесными горами в стране гласных</li>
-            <li>Далеко-далеко за словесными горами в стране гласных</li>
-            <li>Далеко-далеко за словесными горами в стране гласных</li>
-          </ul>
-        </article>
-      </div>
+              <section class="order-box">
+                <h2>Адрес доставки</h2>
+                <div class="order-grid">
+                  <div class="input input-wrapper required">
+                    <label class="input-label" for="order-zip">Почтовый индекс*</label>
+                    <input id="order-zip" type="text" required />
+                  </div>
+                  <div class="input input-wrapper required">
+                    <label class="input-label" for="order-city">Ваш город*</label>
+                    <input id="order-city" type="text" required />
+                  </div>
+                  <div class="input input-wrapper required">
+                    <label class="input-label" for="order-street">Улица*</label>
+                    <input id="order-street" type="text" required />
+                  </div>
+                  <div class="order-row">
+                    <div class="input input-wrapper required">
+                      <label class="input-label" for="order-house">Дом*</label>
+                      <input id="order-house" type="text" required />
+                    </div>
+                    <div class="input input-wrapper">
+                      <label class="input-label" for="order-building">Корпус</label>
+                      <input id="order-building" type="text" />
+                    </div>
+                    <div class="input input-wrapper">
+                      <label class="input-label" for="order-flat">Квартира</label>
+                      <input id="order-flat" type="text" />
+                    </div>
+                  </div>
+                </div>
+                <div class="order-comment">
+                  <p>
+                    Доставка товара по г. Н.Новгород бесплатна при выполнении следующих условий:<br />
+                    Сумма заказа более 30 тыс. руб.<br />
+                    Доставка в регионы<br />
+                    Доставка ТК по России за счёт клиента
+                  </p>
+                </div>
+              </section>
+
+              <section class="order-box">
+                <h2>Способ оплаты</h2>
+                <ul class="payment-list">
+                  <li>
+                    <label class="checkbox-container">
+                      <p>Оплата наличными курьеру</p>
+                      <input type="radio" name="payment" />
+                      <span class="checkmark"></span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox-container">
+                      <p>Оплатить на сайте</p>
+                      <input type="radio" name="payment" />
+                      <span class="checkmark"></span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox-container">
+                      <p>Наличными или банковской картой в магазине</p>
+                      <input type="radio" name="payment" />
+                      <span class="checkmark"></span>
+                    </label>
+                  </li>
+                </ul>
+              </section>
+
+              <section class="order-box">
+                <h2>Комментарий к заказу</h2>
+                <div class="input textarea input-wrapper">
+                  <textarea id="order-message" rows="5" placeholder="Комментарий"></textarea>
+                </div>
+              </section>
+            </div>
+
+            <aside class="order-demo__side">
+              <div class="basket-demo__total">
+                <span>Итого</span>
+                <span>1 405 ₽</span>
+              </div>
+              <div class="basket-demo__meta">
+                <p>Доставка бесплатно</p>
+                <p>Сроки доставки 3-7 дней</p>
+              </div>
+
+              <div class="order-products">
+                <article class="order-product">
+                  <img src="assets/Tazik.webp" alt="" />
+                  <div>
+                    <p class="order-product__art">Арт. 2.355F.65 KV 5328</p>
+                    <p class="order-product__name">Ящик пластиковый 600×400, сплошное дно <span>1 шт</span></p>
+                  </div>
+                  <p class="order-product__price">785 ₽</p>
+                </article>
+                <article class="order-product">
+                  <img src="assets/Korobka.webp" alt="" />
+                  <div>
+                    <p class="order-product__art">Арт. 2.355F.65 KV 5329</p>
+                    <p class="order-product__name">Ящик вкладной 400×300 <span>1 шт</span></p>
+                  </div>
+                  <p class="order-product__price">620 ₽</p>
+                </article>
+              </div>
+
+              <button class="basket-demo__checkout order-submit" type="submit">Оформить заказ</button>
+              <p class="order-text">
+                Нажимая кнопку "Оформить заказ", вы подтверждаете, что ознакомлены и согласны с
+                <a href="Ysloviya.html">условиями</a>
+              </p>
+            </aside>
+          </form>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer" id="contacts">
@@ -157,24 +277,19 @@
         <div class="footer-grid">
           <div class="footer-brand">
             <div class="footer-brand__company">ООО «Исма»</div>
-
             <div class="footer-brand__contacts">
               <a class="footer-pill" href="tel:+79376236888">8 (937) 623-68-88</a>
               <a class="footer-pill" href="tel:+78552399957">8 (8552) 39-99-57</a>
               <a class="footer-pill" href="mailto:isma10@mail.ru">isma10@mail.ru</a>
             </div>
-
             <a class="footer-pill footer-pill--action" href="#">Обратная связь</a>
-
             <div class="footer-brand__address">
               Республика Татарстан, г. Набережные Челны,<br />пр. Набережночелнинский, д.27Б, офис 95<br />ООО ХК «СОЮЗ»
             </div>
-
             <div class="footer-social" aria-label="Социальные сети">
               <a href="#" aria-label="ВКонтакте"></a>
               <a href="#" aria-label="Telegram"></a>
             </div>
-
             <div class="footer-brand__links">
               <a href="#">Карта партнёра</a>
               <a href="SoglasieCookie.html">Согласие на обработку файлов cookie</a>
@@ -218,38 +333,30 @@
       </div>
     </footer>
 
-    <div class="cookie-banner" id="cookieBanner" role="region" aria-label="Уведомление о cookie" hidden>
-      <span class="cookie-banner__icon" aria-hidden="true">
-        <svg width="48" height="48" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <mask id="cookieBiteMaskPolicy">
-              <rect width="40" height="40" fill="#ffffff" />
-              <circle cx="29.7" cy="13.4" r="4.6" fill="#000000" />
-              <circle cx="32.9" cy="17.8" r="3.3" fill="#000000" />
-              <circle cx="26.7" cy="10.8" r="2.4" fill="#000000" />
-            </mask>
-          </defs>
-          <circle cx="20" cy="20" r="14" fill="#F13160" mask="url(#cookieBiteMaskPolicy)" />
-          <circle cx="14.3" cy="14.1" r="1.7" fill="#A61F44" />
-          <circle cx="21.6" cy="12.6" r="1.6" fill="#A61F44" />
-          <circle cx="16.2" cy="19.4" r="1.5" fill="#A61F44" />
-          <circle cx="23.7" cy="20.2" r="1.9" fill="#A61F44" />
-          <circle cx="18.8" cy="25.5" r="1.7" fill="#A61F44" />
-          <circle cx="32.3" cy="13.7" r="1.2" fill="#FF7A9D" />
-          <circle cx="34.6" cy="17.1" r="1" fill="#FF7A9D" />
-          <circle cx="33.5" cy="10.2" r="1.1" fill="#FF7A9D" />
-        </svg>
-      </span>
-      <p class="cookie-banner__text">
-        Продолжая использовать этот сайт и нажимая кнопку «Принимаю», вы даете
-        <a href="SoglasieCookie.html" class="cookie-banner__link">согласие на обработку файлов cookie</a>
-        и использование Яндекс.Метрики.
-      </p>
-      <button type="button" class="cookie-banner__btn" id="cookieBannerAccept">Принимаю</button>
-    </div>
-
     <script src="cookie-banner.js"></script>
     <script src="mobile-menu.js"></script>
+    <script>
+      (function () {
+        var fields = document.querySelectorAll(".order-page .input input");
+        if (!fields.length) return;
+
+        fields.forEach(function (field) {
+          var wrapper = field.closest(".input");
+          if (!wrapper) return;
+
+          function syncState() {
+            if (String(field.value || "").trim() === "") {
+              wrapper.classList.add("empty");
+            } else {
+              wrapper.classList.remove("empty");
+            }
+          }
+
+          syncState();
+          field.addEventListener("input", syncState);
+          field.addEventListener("change", syncState);
+        });
+      })();
+    </script>
   </body>
 </html>
-

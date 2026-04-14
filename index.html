@@ -92,7 +92,7 @@
               alt=""
             />
           </button>
-          <a class="header-tools__pill" href="#cart" aria-label="Корзина">
+          <a class="header-tools__pill" href="basket.html" aria-label="Корзина">
             <span class="header-tools__pill-icon" aria-hidden="true">
               <img
                 class="header-tools__pill-img header-tools__pill-img--desktop"
@@ -1213,7 +1213,6 @@
             }
           });
 
-          /* Tab на вопрос — сразу раскрыть, как будто открыли; мышь не трогаем (mousedown сбрасывает режим) */
           btn.addEventListener("focusin", function () {
             if (!keyboardMode) return;
             if (item.classList.contains("faq-item--open")) return;

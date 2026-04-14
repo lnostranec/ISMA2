@@ -156,7 +156,7 @@ button {
   margin-left: 150px;
 }
 
-/* Расстояния между пунктами: Каталог—О компании 48px, далее по 24px */
+
 .nav__link:nth-child(1) {
   margin-left: 0;
 }
@@ -257,7 +257,7 @@ button {
   border: 0;
 }
 
-/* Мега-меню каталога (ПК, кнопка «Каталог» с 901px) */
+
 .catalog-mega[hidden] {
   display: none !important;
 }
@@ -331,7 +331,7 @@ body.page-katalog.catalog-mega-open .catalog-mega__backdrop {
 
 @media (max-width: 1821px) and (min-width: 901px) {
   .catalog-mega__layout {
-    /* Обе части сжимаются пропорционально, чтобы правые колонки не наезжали */
+    
     grid-template-columns: clamp(300px, 23.9vw, 435px) minmax(0, 1fr);
   }
 
@@ -409,7 +409,7 @@ body.page-katalog.catalog-mega-open .catalog-mega__backdrop {
   transition: opacity 0.15s ease;
 }
 
-/* Состояния мегаменю: сначала только левый столбец; полный / компактный блок справа по data-mega-panel */
+
 #catalogMega[data-mega-state="sidebar"] .catalog-mega__main {
   display: none;
 }
@@ -562,8 +562,7 @@ body.catalog-mega-open {
   }
 }
 
-/* 1281–1400px: до компактной шапки (≤1280) ещё полный телефон в строке —
-   без этого бренд + nav + tools не помещались, корзина уезжала за overflow */
+
 @media (max-width: 1400px) and (min-width: 1281px) {
   .brand {
     min-width: 0;
@@ -684,8 +683,7 @@ body.catalog-mega-open {
 }
 
 .header-tools__pill {
-  /* Высота корзины под макет: в шапке 17px сверху и 16px снизу
-     при общей высоте хедера ~83px → таблетка ~50px */
+  
   height: 50px;
   padding: 0 25px 0 20px;
   border-radius: 999px;
@@ -789,8 +787,7 @@ body.catalog-mega-open {
   display: flex;
   flex-direction: column;
   min-width: 0;
-  /* От серого фона до бейджа «Акция»: 42px сверху и 42px слева
-     (24px общий padding hero-main слева + 18px здесь) */
+  
   padding-top: 42px;
   padding-left: 18px;
 }
@@ -1645,39 +1642,39 @@ body.catalog-mega-open {
 }
 
 @media (min-width: 769px) {
-  /* Новинки / Популярные — десктопные отступы внутри карточки */
+  
   .product-card__img + .product-card__divider {
-    margin-bottom: 17px; /* полоса → Арт */
+    margin-bottom: 17px; 
   }
 
   .product-card__sku {
-    margin-bottom: 17px; /* Арт → Наименование */
+    margin-bottom: 17px; 
   }
 
   .product-card__name {
-    margin-bottom: 27px; /* Наименование → Цена (увеличено) */
+    margin-bottom: 27px; 
   }
 
   .product-card__price {
-    margin-top: auto;    /* всё выше цены "отдаём" вверх, цена и ниже привязаны к низу */
-    margin-bottom: 19px; /* Цена → блок + / - и "В корзину" */
+    margin-top: auto;    
+    margin-bottom: 19px; 
   }
 
   .product-card__row {
-    margin-bottom: 0;    /* сам блок без отступа вниз, ниже рисуем полосу */
-    flex-wrap: wrap;     /* позволяем линии уйти на следующую строку */
+    margin-bottom: 0;    
+    flex-wrap: wrap;     
   }
 
-  /* Тонкая серая полоса под блоком + / - и "В корзину" только на десктопе */
+  
   .product-card__row::after {
     content: "";
     display: block;
     flex-basis: 100%;
     width: 100%;
-    margin-top: 13px; /* расстояние 13px от блока до полосы */
+    margin-top: 13px; 
     margin-inline: 10px;
     border-top: 0.5px solid #e5e5e5;
-    /* при display: grid у строки (моб. вёрстка, узкая карточка каталога) иначе ::after встаёт в ячейку и полоса не на всю ширину */
+    
     grid-column: 1 / -1;
     grid-row: 2;
     box-sizing: border-box;
@@ -1687,13 +1684,13 @@ body.catalog-mega-open {
     display: flex;
     flex-direction: column;
     height: auto;
-    padding-bottom: 0;   /* убираем лишний "воздух" контейнера снизу на ПК */
+    padding-bottom: 0;   
   }
 
-  /* Кнопка "Быстрый заказ": 13px от полосы, 21px до низа карточки */
+  
   .btn-quick {
-    margin-top: 13px;    /* полоса → кнопка */
-    margin-bottom: 21px; /* сразу весь отступ до края карточки */
+    margin-top: 13px;    
+    margin-bottom: 21px; 
   }
 }
 
@@ -1792,14 +1789,14 @@ body.catalog-mega-open {
   font-size: 14px;
 }
 
-/* Диапазон 768–561px: только отступ между qty и кнопкой */
+
 @media (max-width: 768px) and (min-width: 561px) {
   .product-card__row {
     gap: 8px;
   }
 }
 
-/* Мобильные (≤768px): одна высота — grid-строка фиксированной высоты (надёжнее flex + height:100%) */
+
 @media (max-width: 768px) {
   .product-card__row {
     --product-action-h: clamp(40px, 2.8vw, 48px);
@@ -1851,7 +1848,7 @@ body.catalog-mega-open {
     appearance: none;
   }
 
-  /* Новинки / Популярные / каталог: не держать 36px при узкой карточке (min + cqw карточки) */
+  
   .product-card__row > .qty button {
     width: clamp(24px, min(5.5vw, 8cqw), 32px);
     height: clamp(24px, min(5.5vw, 8cqw), 32px);
@@ -2067,7 +2064,7 @@ body.catalog-mega-open {
   box-sizing: border-box;
 }
 
-/* Линия под шапкой на странице каталога (как у мега-меню) */
+
 .page-katalog .site-header {
   border-bottom: 1px solid #e1e1e1;
 }
@@ -2099,7 +2096,7 @@ body.catalog-mega-open {
   color: #6f7374;
 }
 
-/* 27px от полосы до крошек + 22px строка крошек + 28px = 77px до заголовка */
+
 .catalog-page__title {
   margin: 28px 0 20px;
   font-family: "Inter", var(--font);
@@ -2279,7 +2276,7 @@ body.catalog-mega-open {
   transition: color 0.15s ease;
 }
 
-/* Подсветка только у пункта под курсором (без «всегда первый») */
+
 .catalog-sort.is-open .catalog-sort__menu .catalog-sort__option:hover,
 .catalog-sort.is-open .catalog-sort__menu .catalog-sort__option:focus-visible {
   color: var(--accent-hot);
@@ -2327,12 +2324,12 @@ body.catalog-mega-open {
   object-fit: contain;
 }
 
-/* Каталог: как на главной — фикс. блок количества + гибкая кнопка; в узкой карточке — общая сетка и масштаб как в мобильной вёрстке главной */
+
 .catalog-page__grid .product-card__row {
   min-width: 0;
 }
 
-/* Узкая карточка при широком окне: кружки — как в max-width: 768px; сетка строки только в каталоге */
+
 @container product-card (max-width: 380px) {
   .product-card__row > .qty button {
     width: clamp(24px, min(5.5vw, 8cqw), 32px);
@@ -2421,7 +2418,7 @@ body.catalog-mega-open {
 
   .catalog-page__title {
     font-size: 24px;
-    /* 27px + 20px строка крошек + 30px = 77px до заголовка */
+    
     margin-top: 30px;
   }
 
@@ -2580,7 +2577,7 @@ body.catalog-mega-open {
   }
 }
 
-/* Tab / клавиатура: та же розовая рамка карточки, что при hover (без outline на кнопке) */
+
 .faq-item:has(.faq-item__q:focus-visible) {
   border-color: var(--accent-hot);
 }
@@ -2599,7 +2596,7 @@ body.catalog-mega-open {
   line-height: calc(24 / 18);
   letter-spacing: 0;
   color: #1d1a23;
-  /* Системное кольцо фокуса не показываем — акцент на рамке .faq-item (hover / :focus-visible) */
+  
   outline: none;
 }
 
@@ -2686,11 +2683,11 @@ body.catalog-mega-open {
 .site-footer__head {
   padding-left: 44px;
   padding-right: 43px;
-  /* Отступ после полосы до трёх колонок — задан в .footer-grid { padding-top } */
+  
   margin-bottom: 0;
 }
 
-/* Линия = ширина ряда «лого — Наверх»: начинается с лого, заканчивается у правого края ссылки «Наверх» */
+
 .site-footer__head-inner {
   display: flex;
   flex-direction: column;
@@ -2705,7 +2702,7 @@ body.catalog-mega-open {
   gap: 16px;
 }
 
-/* В шапке сайта у .logo стоит padding-block: 17px — в футере убираем, чтобы 32px до лого и ровная строка с «Наверх» */
+
 .site-footer__head-top .logo {
   padding-block: 0;
   align-self: center;
@@ -2731,7 +2728,7 @@ body.catalog-mega-open {
   grid-template-columns: 1.1fr 1fr 0.8fr;
   row-gap: 32px;
   column-gap: 300px;
-  /* 40px от нижнего края сетки (в т.ч. блок «Политика…») до серой линии .footer-bottom::before */
+  
   margin-bottom: 40px;
   padding-top: 49px;
 }
@@ -2759,7 +2756,7 @@ body.catalog-mega-open {
 
 @media (min-width: 993px) {
   .footer-grid {
-    /* Колонка 1 — половина ширины сетки; 2 и 3 делят оставшуюся половину (1 : 0.8) */
+    
     grid-template-columns: 50% minmax(0, 1fr) minmax(0, 0.8fr);
     column-gap: 5px;
   }
@@ -3079,6 +3076,1079 @@ body.catalog-mega-open {
   color: #1f2937;
 }
 
+.error-page {
+  padding: 0 0 3.33vw;
+  text-align: center;
+}
+
+.error-page .container {
+  min-width: 0;
+}
+
+.error-card {
+  width: 100%;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+}
+
+.error-code {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 9.38vw;
+  line-height: 9.38vw;
+  color: var(--accent-hot);
+}
+
+.error-title {
+  margin: 0 0 1.25vw;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  font-size: 1.04vw;
+  line-height: 130%;
+  color: #2f2f2f;
+}
+
+.error-link {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  height: 2.5vw;
+  padding: 0 2.08vw;
+  border-radius: 2.6vw;
+  border: 0;
+  background: #2f2f2f;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  font-size: 0.78vw;
+  line-height: 1;
+  color: #ffffff;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.error-link:hover {
+  background: var(--accent-hot);
+  color: #ffffff;
+}
+
+@media (max-width: 767px) {
+  .error-page {
+    padding-bottom: 17.07vw;
+  }
+
+  .error-code {
+    font-size: 25.6vw;
+    line-height: 25.6vw;
+  }
+
+  .error-title {
+    margin-bottom: 6.4vw;
+    font-size: 5.33vw;
+  }
+
+  .error-link {
+    height: 12.8vw;
+    padding: 0 10.67vw;
+    border-radius: 50px;
+    font-size: 4vw;
+  }
+}
+
+.basket-page {
+  font-family: "Inter", sans-serif;
+}
+
+.basket-page.catalog-page {
+  padding-bottom: 40px;
+}
+
+.basket-breadcrumbs {
+  padding: 1.15vw 0;
+}
+
+.basket-breadcrumbs .catalog-page__breadcrumbs {
+  margin-bottom: 0;
+}
+
+.basket-demo {
+  padding-bottom: 0;
+}
+
+.basket-demo__wrapper {
+  display: grid;
+  grid-template-columns: 1fr minmax(18vw, 24vw);
+  align-items: start;
+  gap: 1.04vw;
+}
+
+.basket-demo__list-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.04vw;
+  min-width: 0;
+}
+
+.basket-demo__list {
+  display: grid;
+  gap: 0.63vw;
+}
+
+.basket-demo__list-actions {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.basket-item {
+  display: flex;
+  gap: 0.83vw;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 0.83vw;
+  padding: 1.04vw;
+}
+
+.basket-item__img {
+  width: 4.17vw;
+  height: 4.17vw;
+  flex: 0 0 4.17vw;
+}
+
+.basket-item__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.basket-item__info {
+  flex: 1;
+}
+
+.basket-item__art {
+  margin: 0 0 0.1vw;
+  font-size: 0.68vw;
+  color: #6f7373;
+}
+
+.basket-item__name {
+  margin: 0 0 0.42vw;
+  font-size: 0.83vw;
+  line-height: 140%;
+}
+
+.basket-item__label {
+  margin: 0;
+  font-size: 0.68vw;
+  color: #6f7373;
+}
+
+.basket-item__controls {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.63vw;
+}
+
+.basket-item__price {
+  margin: 0;
+  font-weight: 400;
+  font-size: 1.09vw;
+  white-space: nowrap;
+}
+
+.basket-item__qty {
+  border: 0.05vw solid #e3e3e3;
+  border-radius: 2.6vw;
+  height: clamp(34px, 2.5vw, 48px);
+  padding: 0.42vw;
+  display: flex;
+  align-items: center;
+  gap: 0.42vw;
+}
+
+.basket-item__qty button {
+  flex-shrink: 0;
+  width: clamp(24px, calc(2.5vw - 8px), 36px);
+  height: clamp(24px, calc(2.5vw - 8px), 36px);
+  min-width: clamp(24px, calc(2.5vw - 8px), 36px);
+  border-radius: 50%;
+  background: #ececec;
+  border: none;
+  font-size: clamp(14px, 1vw, 18px);
+  line-height: 1;
+  color: #444849;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-appearance: none;
+  appearance: none;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.basket-item__qty button:hover {
+  background: #e0e0e0;
+}
+
+.basket-item__qty button:active,
+.basket-item__qty button.is-pressed {
+  background: #444849;
+  color: #fff;
+}
+
+.basket-item__qty input {
+  width: clamp(26px, 2.2vw, 42px);
+  text-align: center;
+  border: 0;
+  font-size: clamp(13px, 0.83vw, 16px);
+  -moz-appearance: textfield;
+  appearance: textfield;
+  background: transparent;
+}
+
+.basket-item__qty input::-webkit-outer-spin-button,
+.basket-item__qty input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.basket-item__remove {
+  width: clamp(24px, 2.5vw, 48px);
+  height: clamp(24px, 2.5vw, 48px);
+  border: 0.05vw solid #e3e3e3;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #2f2f2f;
+  font-size: clamp(14px, 1.1vw, 21px);
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.basket-item__remove:hover {
+  border-color: var(--accent-hot);
+  color: var(--accent-hot);
+}
+
+@media (max-width: 900px) and (min-width: 768px) {
+  .basket-item__qty {
+    height: clamp(34px, 4.3vw, 40px);
+    padding: 2px clamp(4px, 1vw, 8px);
+    gap: clamp(4px, 0.8vw, 8px);
+  }
+
+  .basket-item__qty button {
+    width: clamp(24px, 3vw, 30px);
+    height: clamp(24px, 3vw, 30px);
+    min-width: clamp(24px, 3vw, 30px);
+    font-size: clamp(14px, 1.8vw, 16px);
+  }
+
+  .basket-item__qty input {
+    width: clamp(26px, 3.2vw, 34px);
+    font-size: clamp(13px, 1.5vw, 15px);
+  }
+
+  .basket-item__remove {
+    width: clamp(24px, 3vw, 30px);
+    height: clamp(24px, 3vw, 30px);
+    border-radius: 50%;
+    font-size: clamp(14px, 1.8vw, 16px);
+  }
+}
+
+.basket-demo__summary {
+  background: #ffffff;
+  border-radius: 0.83vw;
+  padding: 1.25vw;
+}
+
+.basket-demo__clear {
+  margin: 0;
+  margin-left: auto;
+  padding: 0 clamp(18px, 2.5vw, 36px);
+  min-height: clamp(34px, 2.5vw, 42px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 999px;
+  background: #e3e3e3;
+  color: #2f2f2f;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  font-size: clamp(12px, 0.78vw, 14px);
+  line-height: 1.2;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.basket-demo__clear:hover {
+  background: var(--accent-hot);
+  color: #fff;
+}
+
+.basket-demo__clear:active {
+  background: #d82650;
+  color: #fff;
+}
+
+.basket-demo__clear:focus-visible {
+  outline: 2px solid var(--accent-hot);
+  outline-offset: 2px;
+}
+
+.basket-demo__total {
+  font-weight: 500;
+  font-size: 1.25vw;
+  color: #000000;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.05vw dashed #d8d8d8;
+  padding-bottom: 0.73vw;
+  margin-bottom: 0.73vw;
+}
+
+.basket-demo__meta {
+  color: #6f7373;
+  font-size: 0.73vw;
+  border-bottom: 0.05vw dashed #d8d8d8;
+  padding-bottom: 0.73vw;
+  margin-bottom: 0.73vw;
+}
+
+.basket-demo__meta p {
+  margin: 0;
+}
+
+.basket-demo__meta p:not(:last-child) {
+  margin-bottom: 0.31vw;
+}
+
+.basket-demo__checkout {
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2.6vw;
+  width: 100%;
+  height: 2.5vw;
+  font-size: 0.78vw;
+  background-color: #2f2f2f;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+}
+
+.basket-demo__checkout:hover {
+  background-color: var(--accent-hot);
+}
+
+@media (max-width: 767px) {
+  .basket-breadcrumbs {
+    padding: 4.27vw 0;
+  }
+
+  .basket-breadcrumbs ul {
+    font-size: 3.47vw;
+    gap: 1.6vw;
+  }
+
+  .basket-page.catalog-page {
+    padding-bottom: 40px;
+  }
+
+  .basket-demo {
+    padding-bottom: 0;
+  }
+
+  .basket-demo__wrapper {
+    grid-template-columns: 1fr;
+    gap: 5.33vw;
+  }
+
+  .basket-item {
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 4.27vw;
+    padding: 5.33vw;
+    gap: 3.2vw;
+  }
+
+  .basket-item__img {
+    width: 14.93vw;
+    height: 14.93vw;
+    flex: 0 0 14.93vw;
+  }
+
+  .basket-item__art {
+    margin-bottom: 3.2vw;
+    font-size: 3.47vw;
+  }
+
+  .basket-item__name {
+    margin-bottom: 4.27vw;
+    font-size: 4vw;
+  }
+
+  .basket-item__label {
+    font-size: 3.47vw;
+  }
+
+  .basket-item__controls {
+    width: 100%;
+    margin-left: 0;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .basket-item__price {
+    font-size: 4.53vw;
+    margin-right: auto;
+  }
+
+  .basket-item__qty {
+    border-width: 0.27vw;
+    border-radius: 13.33vw;
+    height: 10.2vw;
+    width: 55vw;
+    padding: 1.2vw;
+    gap: 0;
+    justify-content: space-between;
+  }
+
+  .basket-item__qty button {
+    width: 6.4vw;
+    height: 6.4vw;
+    min-width: 6.4vw;
+    font-size: 3.6vw;
+  }
+
+  .basket-item__qty input {
+    width: 7.4vw;
+    font-size: 3.6vw;
+  }
+
+  .basket-item__remove {
+    width: 10.2vw;
+    height: 10.2vw;
+    border-width: 0.27vw;
+    border-radius: 13.33vw;
+    font-size: 5vw;
+  }
+
+  .basket-demo__summary {
+    border-radius: 4.27vw;
+    padding: 5.33vw;
+  }
+
+  .basket-demo__list-actions {
+    justify-content: stretch;
+  }
+
+  .basket-demo__clear {
+    width: 100%;
+    margin-left: 0;
+    min-height: 12.8vw;
+    padding: 0 5.33vw;
+    font-size: 4vw;
+    border-radius: 50px;
+  }
+
+  .basket-demo__meta {
+    font-size: 4vw;
+  }
+
+  .basket-demo__total {
+    font-size: 4.53vw;
+    padding-bottom: 5.33vw;
+    margin-bottom: 5.33vw;
+    border-bottom-width: 0.27vw;
+  }
+
+  .basket-demo__meta {
+    padding-bottom: 5.33vw;
+    margin-bottom: 5.33vw;
+    border-bottom-width: 0.27vw;
+  }
+
+  .basket-demo__meta p:not(:last-child) {
+    margin-bottom: 2.13vw;
+  }
+
+  .basket-demo__checkout {
+    height: 12.8vw;
+    border-radius: 50px;
+    font-size: 4vw;
+  }
+}
+
+
+.order-demo,
+.order-demo * {
+  font-family: "Inter", sans-serif;
+}
+
+.order-page .basket-breadcrumbs {
+  padding: 27px 0 0;
+}
+
+.page-order .site-header,
+.page-basket .site-header {
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.order-demo {
+  padding-bottom: 1.67vw;
+}
+
+.order-demo h1 {
+  margin: 28px 0 20px;
+  font-family: "Inter", var(--font);
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1;
+  color: #212121;
+}
+
+.order-demo__wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.04vw;
+  align-items: start;
+}
+
+.order-demo__main {
+  grid-column: 1/10;
+}
+
+.order-demo__side {
+  grid-column: 10/13;
+  background: #fff;
+  border-radius: 0.83vw;
+  padding: 1.25vw;
+}
+
+.order-box {
+  background: #fff;
+  border-radius: 0.83vw;
+  padding: 1.25vw;
+}
+
+.order-box:not(:last-child) {
+  margin-bottom: 1.04vw;
+}
+
+.order-box h2 {
+  margin: 0 0 1.15vw;
+  font-size: 1.04vw;
+  font-weight: 500;
+}
+
+.order-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.04vw;
+}
+
+.order-grid {
+  display: block;
+}
+
+.order-input label {
+  display: block;
+  margin-bottom: 0.42vw;
+  font-size: 0.73vw;
+  color: #6f7373;
+}
+
+.order-input input,
+.order-input textarea {
+  width: 100%;
+  min-height: 2.5vw;
+  border: 0.05vw solid #d8d8d8;
+  border-radius: 0.21vw;
+  padding: 0.52vw 0.73vw;
+  font-size: 0.83vw;
+  font-family: "Inter", sans-serif;
+  color: #2f2f2f;
+  background: #fff;
+}
+
+.order-input textarea {
+  resize: vertical;
+  min-height: 5.2vw;
+}
+
+.order-comment {
+  padding-top: 1.04vw;
+  font-size: 0.78vw;
+  line-height: 140%;
+  font-weight: 300;
+  color: #2f2f2f;
+}
+
+.payment-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.payment-list li:not(:last-child) {
+  margin-bottom: 0.73vw;
+}
+
+.payment-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.52vw;
+  cursor: pointer;
+}
+
+.payment-option input {
+  margin-top: 0.1vw;
+}
+
+.payment-option span {
+  font-size: 0.83vw;
+  line-height: 140%;
+}
+
+.order-products {
+  border-bottom: 0.05vw dashed #bdbdbd;
+  padding-bottom: 1.15vw;
+  margin-bottom: 1.15vw;
+}
+
+.order-product {
+  display: grid;
+  grid-template-columns: 4.17vw 1fr auto;
+  gap: 0.83vw;
+  align-items: center;
+}
+
+.order-product:not(:last-child) {
+  margin-bottom: 0.83vw;
+}
+
+.order-product img {
+  width: 4.17vw;
+  height: 4.17vw;
+  object-fit: contain;
+}
+
+.order-product__art {
+  margin: 0 0 0.1vw;
+  font-size: 0.68vw;
+  color: #6f7373;
+}
+
+.order-product__name {
+  margin: 0;
+  font-size: 0.83vw;
+  line-height: 140%;
+}
+
+.order-product__name span {
+  color: #6f7373;
+}
+
+.order-product__price {
+  margin: 0;
+  font-size: 1.09vw;
+  white-space: nowrap;
+}
+
+.order-submit {
+  border: 0;
+  cursor: pointer;
+}
+
+.order-text {
+  margin: 1.04vw 0 0;
+  font-size: 0.73vw;
+  line-height: 140%;
+  color: #6f7373;
+}
+
+.order-text a {
+  color: #2f2f2f;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.order-text a:hover {
+  color: var(--accent-hot);
+}
+
+.order-text a:focus-visible {
+  outline: 2px solid var(--accent-hot);
+  outline-offset: 2px;
+}
+
+@media (max-width: 767px) {
+  .order-demo {
+    padding-bottom: 8vw;
+  }
+
+  .order-demo h1 {
+    margin-bottom: 6.4vw;
+    font-size: 6.4vw;
+  }
+
+  .order-demo__wrapper {
+    grid-template-columns: 1fr;
+    gap: 5.33vw;
+  }
+
+  .order-demo__main,
+  .order-demo__side {
+    grid-column: 1;
+  }
+
+  .order-demo__side,
+  .order-box {
+    border-radius: 4.27vw;
+    padding: 5.33vw;
+  }
+
+  .order-box:not(:last-child) {
+    margin-bottom: 5.33vw;
+  }
+
+  .order-box h2 {
+    margin-bottom: 4.27vw;
+    font-size: 4.27vw;
+  }
+
+  .order-row {
+    grid-template-columns: 1fr;
+    gap: 3.2vw;
+  }
+
+  .order-grid {
+    display: block;
+  }
+
+  .order-input label {
+    margin-bottom: 2.13vw;
+    font-size: 3.47vw;
+  }
+
+  .order-input input,
+  .order-input textarea {
+    min-height: 12.8vw;
+    border-width: 0.27vw;
+    border-radius: 2.13vw;
+    padding: 2.67vw 3.2vw;
+    font-size: 4vw;
+  }
+
+  .order-input textarea {
+    min-height: 26vw;
+  }
+
+  .order-comment {
+    padding-top: 5.33vw;
+    font-size: 3.47vw;
+  }
+
+  .payment-list li:not(:last-child) {
+    margin-bottom: 2.67vw;
+  }
+
+  .payment-option {
+    gap: 2.13vw;
+  }
+
+  .payment-option span {
+    font-size: 4vw;
+  }
+
+  .order-products {
+    border-bottom-width: 0.27vw;
+    padding-bottom: 5.33vw;
+    margin-bottom: 5.33vw;
+  }
+
+  .order-product {
+    grid-template-columns: 14.93vw 1fr;
+    gap: 3.2vw;
+  }
+
+  .order-product img {
+    width: 14.93vw;
+    height: 14.93vw;
+  }
+
+  .order-product__art {
+    margin-bottom: 1.07vw;
+    font-size: 3.47vw;
+  }
+
+  .order-product__name {
+    margin-bottom: 1.07vw;
+    font-size: 4vw;
+  }
+
+  .order-product__price {
+    grid-column: 2;
+    font-size: 4.53vw;
+  }
+
+  .order-text {
+    margin-top: 4.27vw;
+    font-size: 3.47vw;
+  }
+}
+
+
+.order-page .order-box h2 {
+  font-weight: 300;
+  font-size: 0.78vw;
+  text-transform: uppercase;
+  color: #707070;
+  margin-bottom: 1.15vw;
+}
+
+.order-page .input-wrapper {
+  position: relative;
+}
+
+.order-page .input,
+.order-page .textarea {
+  position: relative;
+  margin-bottom: 1.04vw;
+  width: 100%;
+}
+
+.order-page .order-row .input {
+  margin-bottom: 0;
+}
+
+.order-page .order-box .input.textarea {
+  margin-bottom: 0;
+}
+
+.order-page .input input,
+.order-page .textarea textarea {
+  transition-property: border-color;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.45, 0, 0.55, 1);
+  resize: none;
+  width: 100%;
+  font-size: 0.83vw;
+}
+
+.order-page .input input,
+.order-page .textarea input {
+  border: 0.05vw solid #d8d8d8;
+  height: 2.71vw;
+  padding: 0 1.25vw;
+  border-radius: 2.6vw;
+  padding-top: 0.94vw;
+}
+
+.order-page .input textarea,
+.order-page .textarea textarea {
+  border: 0.05vw solid #d8d8d8;
+  height: 6.25vw;
+  padding: 1.25vw;
+  border-radius: 0.83vw;
+}
+
+.order-page .input .input-label,
+.order-page .textarea .input-label {
+  transition: all 0.3s;
+  position: absolute;
+  left: 1.25vw;
+  font-size: 0.73vw;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  line-height: 1.2;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #000000;
+}
+
+.order-page .textarea .input-label {
+  top: 1.25vw;
+  transform: none;
+}
+
+.order-page .textarea textarea::placeholder {
+  font-family: "Inter", sans-serif;
+  font-size: 0.73vw;
+  font-weight: 300;
+  line-height: 1.2;
+  color: #707070;
+  opacity: 1;
+}
+
+.order-page .input:has(input:focus) .input-label,
+.order-page .input:has(textarea:focus) .input-label,
+.order-page .input:not(.empty) .input-label {
+  font-size: 0.63vw;
+  transform: none;
+  top: 0.52vw;
+}
+
+.order-page .input input:focus,
+.order-page .textarea textarea:focus {
+  border-color: var(--accent-hot);
+  border-width: 1px;
+  outline: none;
+}
+
+.order-page .checkbox-container {
+  width: fit-content;
+  transition: color 0.3s;
+  display: block;
+  position: relative;
+  padding-left: 26px;
+  cursor: pointer;
+  font-size: 0.73vw;
+  user-select: none;
+}
+
+.order-page .checkbox-container p {
+  margin: 0;
+  font-size: 0.73vw;
+  font-weight: 300;
+  line-height: 140%;
+  color: #2f2f2f;
+}
+
+.order-page .checkbox-container input {
+  cursor: pointer;
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.order-page .checkmark {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 0.83vw;
+  height: 0.83vw;
+  background-color: #fff;
+  border: 0.05vw solid #d8d8d8;
+  transition: all 0.3s;
+  border-radius: 2px;
+}
+
+.order-page .checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+  top: 47%;
+  left: 50%;
+  width: 0.21vw;
+  height: 0.42vw;
+  border: solid #fff;
+  border-width: 0 0.09vw 0.09vw 0;
+  transform: translate(-50%, -55%) rotate(45deg);
+}
+
+.order-page .checkbox-container input:checked ~ .checkmark {
+  border-color: var(--accent-hot);
+  background-color: var(--accent-hot);
+}
+
+.order-page .checkbox-container input:checked ~ .checkmark::after {
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .order-page .order-box h2 {
+    font-size: 3.73vw;
+    margin-bottom: 5.33vw;
+  }
+
+  .order-page .input,
+  .order-page .textarea {
+    margin-bottom: 2.13vw;
+  }
+
+  .order-page .input input,
+  .order-page .textarea textarea {
+    font-size: 4vw;
+  }
+
+  .order-page .input input,
+  .order-page .textarea input {
+    border-width: 0.27vw;
+    height: 13.87vw;
+    padding: 0 6.4vw;
+    border-radius: 50px;
+    padding-top: 4.27vw;
+  }
+
+  .order-page .input textarea,
+  .order-page .textarea textarea {
+    border-width: 0.27vw;
+    height: 32vw;
+    padding: 6.4vw;
+    border-radius: 4.27vw;
+  }
+
+  .order-page .input .input-label,
+  .order-page .textarea .input-label {
+    font-size: 4vw;
+    left: 6.4vw;
+  }
+
+  .order-page .textarea textarea::placeholder {
+    font-size: 4vw;
+  }
+
+  .order-page .textarea .input-label {
+    top: 2.13vw;
+  }
+
+  .order-page .input:has(input:focus) .input-label,
+  .order-page .input:has(textarea:focus) .input-label,
+  .order-page .input:not(.empty) .input-label {
+    font-size: 2.67vw;
+    top: 2.13vw;
+  }
+
+  .order-page .checkbox-container {
+    padding-left: 6.4vw;
+    font-size: 4vw;
+  }
+
+  .order-page .checkbox-container p {
+    font-size: 4vw;
+  }
+
+  .order-page .checkmark {
+    width: 4.27vw;
+    height: 4.27vw;
+  }
+
+  .order-page .checkmark::after {
+    width: 1.07vw;
+    height: 2.13vw;
+    border-width: 0 0.53vw 0.53vw 0;
+  }
+}
+
 .cookie-banner {
   position: fixed;
   left: 12px;
@@ -3277,7 +4347,7 @@ body.catalog-mega-open {
     gap: 0;
     padding-bottom: 0;
     white-space: nowrap;
-    /* Иначе пункты с flex-shrink:0 рисуются поверх бренда и .header-tools */
+    
     overflow-x: hidden;
   }
 
@@ -3298,7 +4368,7 @@ body.catalog-mega-open {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    /* Как у .header-tools__icon (50px), не меньше лупы */
+    
     width: 50px;
     height: 50px;
     padding: 0;
@@ -3374,8 +4444,7 @@ body.catalog-mega-open {
   }
 }
 
-/* 901–1100px: узкий ряд — подпись бренда и широкие отступы nav давали налезание
-   кружка «Каталог» на текст и трубки на «Контакты» */
+
 @media (max-width: 1100px) and (min-width: 901px) {
   .brand__sub,
   .brand__divider {
@@ -3484,7 +4553,7 @@ body.catalog-mega-open {
     background: url("assets/phone-icon-mobile.png") center / contain no-repeat;
   }
 
-  /* Эксперимент: без кружка у «Каталог» на узких ширинах */
+  
   .nav__catalog-btn {
     display: none;
   }
@@ -3734,8 +4803,7 @@ body.catalog-mega-open {
     flex: 0 0 auto;
   }
 
-  /* Узкая колонка: центрирование + overflow обрезали края — кружок «Каталог»
-     казался «за» лого, трубка накрывала «Контакты». Скролл вместо обрезки. */
+  
   .nav {
     flex: 1 1 auto;
     min-width: 0;
@@ -3750,7 +4818,7 @@ body.catalog-mega-open {
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     white-space: nowrap;
-    /* Зазор между последним пунктом и колонкой с трубкой (иначе круг 40px накрывал «Контакты») */
+    
     padding-inline-end: 16px;
     scroll-padding-inline-end: 16px;
   }
@@ -3784,7 +4852,7 @@ body.catalog-mega-open {
     flex-shrink: 0;
   }
 
-  /* На 769–900px возвращаем обычный поиск (лупу) */
+  
   .header-tools__phone {
     display: inline-flex;
     width: 34px;
@@ -4411,7 +5479,7 @@ body.mobile-menu-open::after {
   }
 }
 
-/* ——— Страница карточки товара (макет assets/tovar.png) ——— */
+
 .page-tovar .site-header {
   border-bottom: 1px solid #e1e1e1;
 }
@@ -4475,7 +5543,7 @@ body.mobile-menu-open::after {
   grid-template-columns: var(--product-detail-figure-w) minmax(280px, 1.1fr) var(--product-detail-figure-w);
   gap: 28px 41px;
   align-items: start;
-  /* Отступ до футера задаётся только .product-page (47px), без дублирования margin */
+  
   margin-bottom: 0;
 }
 
@@ -4706,7 +5774,7 @@ body.mobile-menu-open::after {
   max-width: var(--product-detail-figure-w, 354px);
 }
 
-/* Блок заказа — свои классы. Размер как у рамки фото (354×284); отступы внутри — по макету в px */
+
 .product-detail__buy-inner {
   --product-detail-order-pad-x: 23px;
   --product-detail-order-pad-top: 21px;
@@ -4727,7 +5795,7 @@ body.mobile-menu-open::after {
   container-name: product-detail-buy;
 }
 
-/* Между артикулом и ценой — на десктопе растягивается (как раньше спейсер сверху), цена и кнопки остаются ниже */
+
 .product-detail__order-spacer-top {
   flex: 0 0 0;
   height: 0;
@@ -4735,7 +5803,7 @@ body.mobile-menu-open::after {
   overflow: hidden;
 }
 
-/* Линия + «Быстрый заказ»: ряд → линия 23px */
+
 .product-detail__order-bottom {
   display: flex;
   flex-direction: column;
@@ -4763,7 +5831,7 @@ body.mobile-menu-open::after {
   color: #6f7373;
 }
 
-/* 3) цена → блок +/− и «В корзину» — 19px */
+
 .product-detail__order-price {
   margin: 0 0 var(--product-detail-order-gap-price-row) 0;
   padding: 0;
@@ -4792,7 +5860,7 @@ body.mobile-menu-open::after {
   font-size: 16px;
 }
 
-/* 2) от низа ряда +/− и «В корзину» до полосы — 23px (спейсер .product-detail__order-spacer) */
+
 .product-detail__order-line {
   display: block;
   margin: 0;
@@ -4804,7 +5872,7 @@ body.mobile-menu-open::after {
   box-sizing: border-box;
 }
 
-/* «Быстрый заказ»: до белого края блока 23px снизу и по бокам — padding у .product-detail__buy-inner; кнопка width 100% внутри контентной области */
+
 .product-detail__order-quick {
   display: flex;
   align-items: center;
@@ -4838,7 +5906,7 @@ body.mobile-menu-open::after {
   color: #fff;
 }
 
-/* Три колонки: блок заказа по размеру с рамкой фото — ширина колонки 354px, высота 284px */
+
 @media (min-width: 1101px) {
   .product-detail__buy-inner {
     width: 100%;
